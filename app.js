@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
 app.use(express.static('public')); // nueva linea (debajo uso middlewars)
 
+app.use(express.static('public'));
+
 // CONFIGURACION PUG - MOTOR DE PLANTILLAS
 app.set('view engine', 'pug');
 app.set('views', './views');
