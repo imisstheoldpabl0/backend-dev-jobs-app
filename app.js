@@ -36,7 +36,7 @@ app.get('/favorites', function(req, res){
 
 // [GET] /profile - Vista del usuario o el admin con sus datos de perfil
 app.get('/profile', function(req, res){
-    res.render('_________.pug');
+    res.render('profile_view.pug');
   });
 
 // [GET] /users - Vista del admin con el listado de usuarios
