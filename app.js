@@ -8,6 +8,7 @@ const morgan = require('./middlewares/morgan')
 // USO MIDDLEWARES
 app.use(express.json());
 app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
+app.use(express.static('public')); // nueva linea (debajo uso middlewars)
 
 app.use(express.static('public'));
 
@@ -28,7 +29,7 @@ app.get('/signup', function(req, res){
 
 // [GET] /login - Vista de ingreso de usuario ya registrado
 app.get('/login', function(req, res){
-    res.render('./users_view/login_view.pug');
+    res.render('./common_views/login_view.pug');
   });
 
 // [GET] /favorites - Vista del usuario con sus favoritos
