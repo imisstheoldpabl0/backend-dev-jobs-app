@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Create job
+  body
+    h1 Create job ad
+    form(action="./views/admin_views/dashboard_view.pug" method="get")
+      // Input para ingresar el título de la oferta de empleo
+      label(for="jobTitle") Job title:
+      input(type="text" id="jobTitle" name="jobTitle" required)
+
+      label(for="jobDescription") Job description:
+      input(type="text" id="jobDescription" name="jobDescription" required)
+      
+      // Botón de búsqueda
+      button(type="submit") Save
+      img(src="", alt="", srcset="")

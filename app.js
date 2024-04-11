@@ -9,14 +9,15 @@ const morgan = require('./middlewares/morgan')
 app.use(express.json());
 app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
 
+app.use(express.static('public'));
 // CONFIGURACION PUG - MOTOR DE PLANTILLAS
 app.set('view engine', 'pug');
 app.set('views', './views');
 
 // ENPOINTS WEB
 // [GET] / Vista inicio de la app
-app.get('/home', function(req, res){
-    res.render('home_view.pug');
+app.get('/', function(req, res){
+    res.render('./common_views/home_view.pug');
   });
 
 // [GET] /signup - Vista de registro de usuario
@@ -46,7 +47,7 @@ app.get('/users', function(req, res){
 
 // [GET] /dashboard - Vista de admin para crear y visualizar anuncios
 app.get('/dashboard', function(req, res){
-    res.render('dashboard_view.pug');
+    res.render('./admin_views/dashboard_view.pug');
   });
 
 
