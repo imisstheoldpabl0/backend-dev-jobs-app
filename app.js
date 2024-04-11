@@ -9,6 +9,8 @@ const morgan = require('./middlewares/morgan')
 app.use(express.json());
 app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
 
+app.use(express.static('public'));
+
 // CONFIGURACION PUG - MOTOR DE PLANTILLAS
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -26,12 +28,12 @@ app.get('/signup', function(req, res){
 
 // [GET] /login - Vista de ingreso de usuario ya registrado
 app.get('/login', function(req, res){
-    res.render('login_view.pug');
+    res.render('./common_views/login_view.pug');
   });
 
 // [GET] /favorites - Vista del usuario con sus favoritos
 app.get('/favorites', function(req, res){
-    res.render('favorites_view.pug');
+    res.render('./user_views/favorites_view.pug');
   });
 
 // [GET] /profile - Vista del usuario o el admin con sus datos de perfil
