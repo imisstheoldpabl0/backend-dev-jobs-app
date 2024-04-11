@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title JOBS APP
+  body
+    h1 Profile
+    img(src='' alt='')
+    form(action="./profile_view.pug" method="post")
+      // Input para ingresar los datos
+      label(for="datoName") Nombre:
+      input(type="text" id="datoName" name="datoName" required)
+      label(for="datoEmail") Email:
+      input(type="text" id="datoEmail" name="datoEmail" required)
+      
+      // Botón de búsqueda
+      button(type="submit") Editar
+      img(src="", alt="")
