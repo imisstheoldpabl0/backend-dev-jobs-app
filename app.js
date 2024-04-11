@@ -12,21 +12,19 @@ app.use(express.static('public')); // nueva linea (debajo uso middlewars)
 
 app.use(express.static('public'));
 
-app.use(express.static('public'));
 // CONFIGURACION PUG - MOTOR DE PLANTILLAS
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-// ENPOINTS WEB
+// ENDPOINTS WEB
 // [GET] / Vista inicio de la app
-
 app.get('/', function(req, res){
     res.render('./common_views/home_view.pug');
   });
 
 // [GET] /signup - Vista de registro de usuario
 app.get('/signup', function(req, res){
-    res.render('./admin_views/signup_view.pug');
+    res.render('./user_views/signup_view.pug');
   });
 
 // [GET] /login - Vista de ingreso de usuario ya registrado
@@ -56,6 +54,7 @@ app.get('/dashboard', function(req, res){
 
 
 // ENDPOINTS API
+
 
 // LISTENING PORT - http://localhost:3000
 const server = app.listen(port, () => {

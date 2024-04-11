@@ -1,19 +1,18 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Create job
-  body
-    h1 Create job ad
-    form(action="./views/admin_views/dashboard_view.pug" method="get")
-      // Input para ingresar el título de la oferta de empleo
-      label(for="jobTitle") Job title:
-      input(type="text" id="jobTitle" name="jobTitle" required)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./style.css")
+        title Dev Job Finder
+    body
+        main
+            section(id="signUp")
+                h1 Home
+                form(action="./api/search" method="get")
 
-      label(for="jobDescription") Job description:
-      input(type="text" id="jobDescription" name="jobDescription" required)
-      
-      // Botón de búsqueda
-      button(type="submit") Save
-      img(src="", alt="", srcset="")
+                // Input para ingresar puestos de trabajo
+                label(for="jobTitle") Job Title: 
+                input(type="text" id="jobTitle" name="jobTitle" required)
+                // Botón de búsqueda
+                button(type="submit") Search

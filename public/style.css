@@ -1,6 +1,17 @@
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+#signUp {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    input {
+        margin-bottom: 24px;
+    }
+}
+
 
 #signInForm {
     display: flex;

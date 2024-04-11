@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./style.css")
+        title Dev Job Finder
+    body
+        main 
+            h1 Home
+            section(id="signUp")
+                form(action="./api/search" method="get")
+
+                // Input para ingresar puestos de trabajo
+                label(for="userName") Username: 
+                input(type="text" id="userName" name="userName" required)
+
+                label(for="email") Email: 
+                input(type="text" id="email" name="email" required)
+
+                label(for="password") Password: 
+                input(type="text" id="password" name="password" required)
+
+                label(for="passwordR") Repeat Password: 
+                input(type="text" id="passwordR" name="passwordR" required)
+
+                // Botón de búsqueda
+                button(type="submit") Signup
