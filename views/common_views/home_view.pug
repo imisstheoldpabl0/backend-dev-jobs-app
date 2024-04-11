@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./style.css")
+        title Dev Job Finder
+    body
+        main
+            section(id="signUp")
+                h1 Home
+                form(action="./api/search" method="get")
+
+                // Input para ingresar puestos de trabajo
+                label(for="jobTitle") Job Title: 
+                input(type="text" id="jobTitle" name="jobTitle" required)
+                // Botón de búsqueda
+                button(type="submit") Search

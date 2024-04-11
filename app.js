@@ -9,48 +9,51 @@ const morgan = require('./middlewares/morgan')
 app.use(express.json());
 app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
 
+app.use(express.static('public'));
+
 // CONFIGURACION PUG - MOTOR DE PLANTILLAS
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-// ENPOINTS WEB
+// ENDPOINTS WEB
 // [GET] / Vista inicio de la app
-app.get('/home', function(req, res){
-    res.render('home_view.pug');
+app.get('/', function(req, res){
+    res.render('./common_views/home_view.pug');
   });
 
 // [GET] /signup - Vista de registro de usuario
 app.get('/signup', function(req, res){
-    res.render('signup_view.pug');
+    res.render('./user_views/signup_view.pug');
   });
 
 // [GET] /login - Vista de ingreso de usuario ya registrado
 app.get('/login', function(req, res){
-    res.render('login_view.pug');
+    res.render('./users_view/login_view.pug');
   });
 
 // [GET] /favorites - Vista del usuario con sus favoritos
 app.get('/favorites', function(req, res){
-    res.render('favorites_view.pug');
+    res.render('./user_views/favorites_view.pug');
   });
 
 // [GET] /profile - Vista del usuario o el admin con sus datos de perfil
 app.get('/profile', function(req, res){
-    res.render('profile_view.pug');
+    res.render('./common_views/profile_view.pug');
   });
 
 // [GET] /users - Vista del admin con el listado de usuarios
 app.get('/users', function(req, res){
-    res.render('users_view.pug');
+    res.render('./admin_views/users_view.pug');
   });
 
 // [GET] /dashboard - Vista de admin para crear y visualizar anuncios
 app.get('/dashboard', function(req, res){
-    res.render('dashboard_view.pug');
+    res.render('./admin_views/dashboard_view.pug');
   });
 
 
 // ENDPOINTS API
+
 
 // LISTENING PORT - http://localhost:3000
 const server = app.listen(port, () => {
