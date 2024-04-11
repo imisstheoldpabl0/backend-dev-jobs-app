@@ -1,3 +1,7 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #signInForm {
     display: flex;
     flex-direction: column;
