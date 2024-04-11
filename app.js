@@ -12,13 +12,15 @@ app.use(express.static('public')); // nueva linea (debajo uso middlewars)
 
 app.use(express.static('public'));
 
+app.use(express.static('public'));
 // CONFIGURACION PUG - MOTOR DE PLANTILLAS
 app.set('view engine', 'pug');
 app.set('views', './views');
 
 // ENPOINTS WEB
 // [GET] / Vista inicio de la app
-app.get('/home', function(req, res){
+
+app.get('/', function(req, res){
     res.render('./common_views/home_view.pug');
   });
 
