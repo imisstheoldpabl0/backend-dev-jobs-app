@@ -2,9 +2,26 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title JOBS APP
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./style.css")
+    title Dev Job Finder
   body
+    header.header
+      nav.navbar
+          a.nav-logo(href="#") DevJob Finder
+          ul.nav-menu
+              li.nav-item 
+                  a.nav-link(href="#") Home
+              li.nav-item
+                  a.nav-link(href="#") Profile
+              li.nav-item
+                  a.nav-link(href="#") Ads
+              li.nav-item
+                  a.nav-link(href="#") Logout
+          .hamburger
+              span.bar
+              span.bar
+              span.bar
     h1 Profile
     img(src='' alt='')
     form(action="./profile_view.pug" method="post")
@@ -17,3 +34,5 @@ html(lang="en")
       // Botón de búsqueda
       button(type="submit") Editar
       img(src="", alt="")
+
+      script(src="./script.js")
