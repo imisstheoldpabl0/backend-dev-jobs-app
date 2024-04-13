@@ -52,6 +52,7 @@ app.get('/dashboard', function(req, res){
     res.render('./admin_views/dashboard_view.pug');
   });
 
+app.use('/profile', profileRoutes);
 
 // ENDPOINTS API
 
