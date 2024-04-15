@@ -2,8 +2,20 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 
-//const usersController = require("../controllers/users.controller.js");
-//const favoritesController = require("../controllers/favorites.controller.js");
+
+const adsController = require('../controllers/admin.controller');
+
+
+// http://localhost:3000/signup
+// [GET] /signup - nolog user
+app.get('/signup', function(req, res){
+  res.render('./user_views/signup_view.pug');
+});
+
+// [GET] /login - Vista de ingreso de usuario ya registrado
+app.get('/login', function(req, res){
+  res.render('./common_views/login_view.pug');
+});
 
 
 // ADMIN
@@ -25,7 +37,8 @@ app.get('/dashboard', function(req, res){
 });
 
 
-// USER 
+
+
 
 
 // [GET] /favorites - Vista del usuario con sus favoritos
@@ -33,11 +46,15 @@ app.get('/favorites', function(req, res){
     res.render('./user_views/favorites_view.pug');
   });
 
+// COMMON
+
   // [GET] /profile - Compartida con Admin
 app.get('/profile', function(req, res){
     res.render('./common_views/profile_view.pug');
   });
 
-
+router.post("/", adsController.createAds);
+router.put("/", adsController.updateAds);
+router.delete("/", adsController.deleteAds);
 
 module.exports = router;

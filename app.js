@@ -11,6 +11,8 @@ const nologgedRoutes = require("./routes/nolog.routes")
 // IMPORTAR MIDDLEWARES
 const morgan = require('./middlewares/morgan')
 
+
+
 // USO MIDDLEWARES
 app.use(express.json());
 app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
@@ -30,7 +32,10 @@ app.get("/", (req, res) => {
   res.status(200).send("Home. Welcome to backend!");
 });
 
-
+// [GET] /login - Compartida con Users
+app.get('/login', function(req, res){
+  res.render('./common_views/login_view.pug');
+});
 
 // ENDPOINTS API
 app.use('/api/users', usersRoutes);
