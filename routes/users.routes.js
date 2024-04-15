@@ -25,6 +25,8 @@ app.get('/dashboard', function(req, res){
 });
 
 
+
+
 // USER 
 
 
@@ -32,6 +34,8 @@ app.get('/dashboard', function(req, res){
 app.get('/favorites', function(req, res){
     res.render('./user_views/favorites_view.pug');
   });
+
+// COMMON
 
   // [GET] /profile - Compartida con Admin
 app.get('/profile', function(req, res){

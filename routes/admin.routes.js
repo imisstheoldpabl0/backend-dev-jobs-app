@@ -5,10 +5,7 @@ const express = require('express');
 //const favoriteController = require("../controllers/favorites.controller");
 const adsController = require('../controllers/admin.controller');
 
-// [GET] /login - Compartida con Users
-app.get('/login', function(req, res){
-    res.render('./common_views/login_view.pug');
-  });
+
 
 // [GET] /profile - Compartida con Users
 app.get('/profile', function(req, res){
