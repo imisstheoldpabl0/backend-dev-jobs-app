@@ -4,18 +4,30 @@ const users = require('../models/admin.model');
 
 
 // Faltan cosas revisar
-// createUser (cuando se registra)
+// createUser (cuando se registra) - Se envía por post los datos del usuario a crear {username, email, password} y retorna un status 201 
+const postCreateUser = async (req, res) => {
+    const modifiedEntry = req.body; // {username, email, password}
+    const response = await entry.postCreateUser(modifiedEntry);
+    res.status(201).json({
+        msg: "usuario creado",
+        "items_updated": response,
+        data: modifiedEntry
+    });
+}
 
-
-
-
-/* const createUser = async (req, res) => {
-    try
-    catch
-   ...
-}  */
+const getAllUsers = async (req, res) => {
+    const modifiedEntry = req.body;
+    const response = await entry.getAllUsers(modifiedEntry);
+    res.status(201).json({
+        msg: "usuarios listados",
+        "items_updated": response,
+        data: modifiedEntry
+    });
 
 // getAllUsers
+
+
+
 // getUserProfile
 
 
@@ -25,6 +37,5 @@ const users = require('../models/admin.model');
 // deleteAdmin
 
 module.exports = {
-
-
-}
+    postCreateUser,
+};

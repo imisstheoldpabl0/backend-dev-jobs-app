@@ -22,7 +22,7 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-// Endopints WEB
+// ENDPOINTS WEB
 
 
 // http://localhost:3000/
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Home. Welcome to backend!");
 });
 
-// Endpoints API
+// ENDPOINTS API
 app.use('/api/users', usersRoutes);
 app.use('/api/nologged',nologgedRoutes);
 app.use('/api/admin',adminRoutes);

@@ -4,8 +4,6 @@ const express = require('express');
 const userController = require("../controllers/users.controller");
 const favoriteController = require("../controllers/favorites.controller");
 
-
-
 // [GET] /login - Compartida con Users
 app.get('/login', function(req, res){
     res.render('./common_views/login_view.pug');
