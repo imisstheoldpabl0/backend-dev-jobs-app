@@ -3,9 +3,9 @@ const app = express();
 const port = 3000;
 
 // Rutas
-const usersRoutes = require("./routes/user.routes")
+const usersRoutes = require("./routes/users.routes")
 const adminRoutes = require("./routes/admin.routes")
-const nologgedRoutes = require("./routes/nologged.routes")
+const nologgedRoutes = require("./routes/nolog.routes")
 
 
 // IMPORTAR MIDDLEWARES
@@ -30,9 +30,11 @@ app.get("/", (req, res) => {
   res.status(200).send("Home. Welcome to backend!");
 });
 
+
+
 // ENDPOINTS API
 app.use('/api/users', usersRoutes);
-app.use('/api/nologged',nologgedRoutes);
+app.use('/api/nologged',nologRoutes);
 app.use('/api/admin',adminRoutes);
 //app.use("./api/ads",adsRoutes);
 

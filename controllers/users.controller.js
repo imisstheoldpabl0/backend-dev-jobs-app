@@ -1,5 +1,36 @@
 const users = require('../models/users.model');
 
+
+// ADMIN
+// Controllers básicos CRUDE
+
+
+// Faltan cosas revisar
+// createUser (cuando se registra)
+
+
+
+
+/* const createUser = async (req, res) => {
+    try
+    catch
+   ...
+}  */
+
+// getAllUsers
+// getUserProfile
+
+
+// editAdminProfile (update)
+
+// deleteUser
+// deleteAdmin
+
+
+
+// USER
+
+
 // CRUDE para usuarios logueados
 
 // POST createUser (SignUp)
