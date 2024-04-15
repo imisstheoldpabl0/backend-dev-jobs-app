@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 app.use('/api/users', usersRoutes);
 app.use('/api/nologged',nologgedRoutes);
 app.use('/api/admin',adminRoutes);
+//app.use("./api/ads",adsRoutes);
 
 
 
