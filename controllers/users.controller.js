@@ -2,35 +2,33 @@ const users = require('../models/admin.model');
 const Ads= require('../models/ads.model');
 
 
-// ADMIN
-// Controllers básicos CRUDE
 
-
+/* ----- USERS ----- */
 // Faltan cosas revisar
-// createUser (cuando se registra)
+// createUser
+const createUser = async (req, res) => {
+    const newUser = req.body; // {name, surname, location, email, password}
+    const response = await users.createUser(newUser);
+    res.status(201).json({
+        "user_created": response,
+        data: modifiedEntry
+    });
+}
 
-
-
-
-/* const createUser = async (req, res) => {
-    try
-    catch
-   ...
-}  */
-
+/* ----- ADMIN ----- */
 // getAllUsers
-// getUserProfile
+const getAllUsers = async (req, res) => {
+    const modifiedEntry = req.body;
+    const response = await entry.getAllUsers(modifiedEntry);
+    res.status(201).json({
+        msg: "usuarios listados",
+        "items_updated": response,
+        data: modifiedEntry
+    });
+}
 
-
-// editAdminProfile (update)
-
-// deleteUser
-// deleteAdmin
-
-// Controllers básicos CRUDE
-
+/* ----- ADMIN > ADS ----- */
 //CREATE ads
-
 const createAds = async (req, res) => {
     try {
         const data = req.body;
@@ -44,7 +42,6 @@ const createAds = async (req, res) => {
 }
 
 //UPDATE ads
-
 const updateAds = async (req, res) => {
     try {
         const time = req.params.time;
@@ -59,7 +56,6 @@ const updateAds = async (req, res) => {
 }
 
 //DELETE ads
-
 const deleteAds = async (req, res) => {
     try {
         const newData = req.body;
@@ -72,31 +68,6 @@ const deleteAds = async (req, res) => {
     }
 }
 
-// Faltan cosas revisar
-// createUser (cuando se registra) - Se envía por post los datos del usuario a crear {username, email, password} y retorna un status 201 
-const postCreateUser = async (req, res) => {
-    const modifiedEntry = req.body; // {username, email, password}
-    const response = await entry.postCreateUser(modifiedEntry);
-    res.status(201).json({
-        msg: "usuario creado",
-        "items_updated": response,
-        data: modifiedEntry
-    });
-}
-
-const getAllUsers = async (req, res) => {
-    const modifiedEntry = req.body;
-    const response = await entry.getAllUsers(modifiedEntry);
-    res.status(201).json({
-        msg: "usuarios listados",
-        "items_updated": response,
-        data: modifiedEntry
-    });
-
-// getAllUsers
-
-
-
 // getUserProfile
 
 
@@ -106,7 +77,8 @@ const getAllUsers = async (req, res) => {
 // deleteAdmin
 
 module.exports = {
-    postCreateUser,
+    createUser,
+    getAllUsers,
     createAds,
     updateAds,
     deleteAds

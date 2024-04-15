@@ -4,13 +4,15 @@ const pool = require('../config/db_pgsql');
 const users = require('./queries/users.queries')
 
 // CREATE - POST /api/user (ejemplo archivo queries)
-const postCreateUser = async (user) => {
-  const { username, email, password } = entry;
+const createUser = async (entry) => {
+  const { name, surname, location, email, password } = entry;
   let client, result;
   try {
       client = await pool.connect(); // Espera a abrir conexion
-      const data = await client.query(queries.postCreateUser, [
-          username,
+      const data = await client.query(queries.createUser, [
+          name,
+          surname,
+          location,
           email,
           password
       ]);
