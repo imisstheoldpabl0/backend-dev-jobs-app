@@ -1,5 +1,5 @@
 const users = require('../models/admin.model');
-const Ads= require('../models/ads.model');
+const Ads = require('../models/ads.model');
 
 
 // ADMIN
@@ -49,9 +49,9 @@ const updateAds = async (req, res) => {
     try {
         const time = req.params.time;
         const newData = req.body;
-        let ads = await Ads.updateOne({time}, newData)
+        let ads = await Ads.updateOne({ time }, newData)
         res.status(200).json(ads);
-    } 
+    }
     catch (error) {
         console.log(`ERROR: ${error.stack}`);
         res.status(400).json({ msj: `ERROR: ${error.stack}` });
@@ -65,7 +65,7 @@ const deleteAds = async (req, res) => {
         const newData = req.body;
         let ads = await Ads.deleteOne(newData)
         res.status(200).json(ads);
-    } 
+    }
     catch (error) {
         console.log(`ERROR: ${error.stack}`);
         res.status(400).json({ msj: `ERROR: ${error.stack}` });
@@ -92,6 +92,7 @@ const getAllUsers = async (req, res) => {
         "items_updated": response,
         data: modifiedEntry
     });
+}
 
 // getAllUsers
 
@@ -138,9 +139,3 @@ module.exports = {
 // GET Recover password / Restore
 
 // Cambio de contraseña amirar
-
-
-module.exports = {
-
-
-}
