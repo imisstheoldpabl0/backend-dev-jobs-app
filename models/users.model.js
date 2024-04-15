@@ -1,13 +1,62 @@
-const {Pool} = require('pg');
+const { Pool } = require('pg');
 const pool = require('../config/db_pgsql');
 
 const users = require('./queries/users.queries')
 
-// CREATE - POST methods
+// CREATE - POST /api/user (ejemplo archivo queries)
+const postCreateUser = async (user) => {
+  const { username, email, password } = entry;
+  let client, result;
+  try {
+      client = await pool.connect(); // Espera a abrir conexion
+      const data = await client.query(queries.postCreateUser, [
+          username,
+          email,
+          password
+      ]);
+      result = data.rowCount;
+  } catch (err) {
+      console.log(err);
+      throw err;
+  } finally {
+      client.release();
+  }
+  return result;
+};
 
 // READ - GET methods
+const getAllUsers = async () => {
+  let client,result;
+  try{
+      client = await pool.connect();
+      const data = await client.query(queries.getAllUsers)
+      result = data.rows
+  }catch(err){
+      console.log(err);
+      throw err;
+  }finally{
+      client.release();    
+  }
+  return result
+}
 
 // UPDATE - PUT methods
+const putUpdateUser = async () => {
+  let client,result;
+  try{
+      client = await pool.connect();
+      const data = await client.query(queries.putUpdateUser)
+      result = data.rows
+  }catch(err){
+      console.log(err);
+      throw err;
+  }finally{
+      client.release();    
+  }
+  return result
+}
+
+
 
 // DELETE - DELETE methods
 
@@ -29,4 +78,8 @@ const getAuthorsByEmail = async (email) => {
   }; */
 
 
-modules.exports = users;
+modules.exports = {
+  postCreateUser,
+  getAllUsers,
+  putUpdateUser
+}

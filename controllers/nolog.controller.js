@@ -5,8 +5,6 @@ const users = require('../models/users.model');
 // GET a Mongo del detalle de la oferta
 
 
-
-
 module.exports = {
 
 }

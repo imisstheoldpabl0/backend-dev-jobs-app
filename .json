@@ -1,0 +1,47 @@
+[
+    {
+      "Role": "FullStack developer",
+      "Company_name": "Novanotio",
+      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/novanotio.jpg",
+      "Location": "Zaragoza",
+      "Time": "Full",
+      "Mode": "Remote",
+      "Requirements": "No previous experience"
+    },
+    {
+      "Role": "Cybersecurity technician",
+      "Company_name": "Mnemo Security",
+      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/mnemo.png",
+      "Location": "La Coruña",
+      "Time": "Part-time",
+      "Mode": "Presencial",
+      "Requirements": "No previous experience"
+    },
+    {
+      "Role": "Telecommunications engineer",
+      "Company_name": "GTT",
+      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/gtt.jpg",
+      "Location": "Madrid",
+      "Time": "Part-time",
+      "Mode": "Presencial",
+      "Requirements": "No previous experience"
+    },
+    {
+      "Role": "Data Analist",
+      "Company_name": "Ingeteam",
+      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/ingeteam.jpg",
+      "Location": "Valencia",
+      "Time": "Full",
+      "Mode": "Hybrid",
+      "Requirements": "No previous experience"
+    },
+    {
+      "Role": "Marketing Manager",
+      "Company_name": "Segula Technologies",
+      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/segula.png",
+      "Location": "Barcelona",
+      "Time": "Part-time",
+      "Mode":  "Remote",
+      "Requirements": "No previous experience"
+    }
+  ]

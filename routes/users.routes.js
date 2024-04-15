@@ -1,9 +1,9 @@
 const express = require('express');
-
 const router = express.Router();
+const app = express();
 
-const usersController = require("../controllers/users.controller.js");
-const favoritesController = require("../controllers/favorites.controller.js");
+//const usersController = require("../controllers/users.controller.js");
+//const favoritesController = require("../controllers/favorites.controller.js");
 
 
 // ADMIN
