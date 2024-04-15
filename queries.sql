@@ -50,7 +50,7 @@ const AdminQueries = {
 -- USER QUERIES /api/user
 -- (al crearse la tabla users, y crearse una cuenta, solo deberian rellenarse los campos de username y email, y password, y posteriormente se podra actualizar el resto de campos una vez se edite el perfil)
 const userQueries = {
-    postCreateUser: `
+    createUser: `
     INSERT INTO users
         VALUES
             username = $1,
@@ -61,7 +61,7 @@ const userQueries = {
 -- COMMON QUERIES /api/user
 const commonQueries = {
     -- actualiza el perfil del usuario logueado checkeando que el email sea correcto
-    putUpdateUser: `
+    updateUser: `
         UPDATE users
         SET 
             name = COALESCE($1, name),
@@ -71,7 +71,7 @@ const commonQueries = {
             password = COALESCE($5, password),
             profile_pic = COALESCE($6, profile_pic)
         WHERE email = $7;`
-    putLoginUser: `
+    loginUser: `
     UPDATE users
     SET log_status = TRUE
     WHERE email = $1 AND password = $2;`
