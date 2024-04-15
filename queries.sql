@@ -37,7 +37,7 @@ VALUES
 ('candidate','Carlos','Sotomayor', 'carlos@gmail.com','añklejñs');
 
 -- ADMIN QUERIES /api/user
-constAdminQueries = {
+const AdminQueries = {
     -- selecciona todos los usuarios
     getAllUsers: `
     SELECT * FROM users;`
@@ -60,14 +60,19 @@ const userQueries = {
 
 -- COMMON QUERIES /api/user
 const commonQueries = {
-    -- actualiza el perfil del usuario logueado checkeando que el username y password sean correctos
+    -- actualiza el perfil del usuario logueado checkeando que el email sea correcto
     putUpdateUser: `
         UPDATE users
-        SET name = $1,
-            surname = $2,
-            location = $3,
-            email = $4,
-            image = $5
-        WHERE username = $5
-        AND password = $6;`
-}
+        SET 
+            name = COALESCE($1, name),
+            surname = COALESCE($2, surname),
+            location = COALESCE($3, location),
+            email = COALESCE($4, email),
+            password = COALESCE($5, password),
+            profile_pic = COALESCE($6, profile_pic)
+        WHERE email = $7;`
+    putLoginUser: `
+    UPDATE users
+    SET log_status = TRUE
+    WHERE email = $1 AND password = $2;`
+};

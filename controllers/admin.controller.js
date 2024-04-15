@@ -66,6 +66,8 @@ const getAllUsers = async (req, res) => {
         "items_updated": response,
         data: modifiedEntry
     });
+}
+
 
 // getAllUsers
 
