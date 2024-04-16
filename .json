@@ -1,47 +1,54 @@
+
 [
     {
-      "Role": "FullStack developer",
-      "Company_name": "Novanotio",
-      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/novanotio.jpg",
-      "Location": "Zaragoza",
-      "Time": "Full",
-      "Mode": "Remote",
-      "Requirements": "No previous experience"
+      "id": 1,
+      "title": "FullStack developer",
+      "company_name": "Novanotio",
+      "description": "Desde Fihoca estamos ampliando nuestro equipo y buscamos un perfil de Full Stack Developer sin experiencia pero con conocimientos de Angular/React y desarrollo de Back End con Java para trabajar directamente con nosotros, de forma indefinida y con modalidad híbrida en Zaragoza ciudad.",
+      "location": "Zaragoza",
+      "mode": "Hybrid",
+      "requirements": "No previous experience",
+      "logo": "https://novanotio.es/wp-content/uploads/2021/01/logo-novanotio-completo.png"
     },
     {
-      "Role": "Cybersecurity technician",
-      "Company_name": "Mnemo Security",
-      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/mnemo.png",
-      "Location": "La Coruña",
-      "Time": "Part-time",
-      "Mode": "Presencial",
-      "Requirements": "No previous experience"
+      "id": 2,
+      "title": "Cybersecurity technician",
+      "company_name": "Mnemo Security",
+      "description": "Se requiere el perfil de una persona metódica, con gran implicación, capacidad de trabajo en equipo, aprendizaje y adaptación. Conocimientos básicos de gestión de alertas de ciberseguridad, vigilancia y monitorización de alertas de ciberseguridad. Aptitud para planificar objetivos y cumplir con los plazos de resolución con conocimientos a nivel usuario de aplicaciones Office y conocimientos a nivel técnico en Python, bash, powershell, c++, php y metasploit.",
+      "location": "La Coruña",
+      "mode": "Presencial",
+      "requirements": "No previous experience",
+      "logo": "https://mnemo.com/wp-content/uploads/2021/01/vc-1.jpg"
     },
     {
-      "Role": "Telecommunications engineer",
-      "Company_name": "GTT",
-      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/gtt.jpg",
-      "Location": "Madrid",
-      "Time": "Part-time",
-      "Mode": "Presencial",
-      "Requirements": "No previous experience"
+      "id": 3,
+      "title": "Telecommunications engineer",
+      "company_name": "GTT",
+      "description": "Buscamos incorporar Ingeniero/a sin experiencia para el área de Proyectos de la empresa, encargada de la elaboración de memorias técnicas y gestión de permisos en el campo de la fibra óptica. La persona seleccionada se incorporará a un ambiente de trabajo estable y con un trato familiar y cercano, integrándose en el Área de ingeniería reportando directamente a CTO.",
+      "location": "Madrid",
+      "mode": "Presencial",
+      "requirements": "No previous experience",
+      "logo": "https://www.gtt.es/wp-content/uploads/gtt-home-logo-new-300x207.png"
     },
     {
-      "Role": "Data Analist",
-      "Company_name": "Ingeteam",
-      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/ingeteam.jpg",
-      "Location": "Valencia",
-      "Time": "Full",
-      "Mode": "Hybrid",
-      "Requirements": "No previous experience"
+      "id": 4,
+      "title": "Data Analist",
+      "company_name": "Ingeteam",
+      "description": "Buscamos un/a analista de datos para trabajar en un gran proyecto multidisciplinar en banca internacional en Madrid. Se encargará de la automatización de procesos asociados a la herramienta de cálculo de RV.",
+      "location": "Valencia",
+      "mode": "Hybrid",
+      "requirements": "No previous experience",
+      "logo": "https://www.ingeteam.com/Portals/0/DocumentacionCorporativa/Ingeteam.jpg"
     },
     {
-      "Role": "Marketing Manager",
-      "Company_name": "Segula Technologies",
-      "Logo": "/Volumes/fullstack_thebridge/curso_fullstack/backend-dev-jobs-app/public/assets/logos_company_name/segula.png",
-      "Location": "Barcelona",
-      "Time": "Part-time",
-      "Mode":  "Remote",
-      "Requirements": "No previous experience"
+      "id": 5,
+      "title": "Marketing Manager",
+      "company_name": "Segula Technologies",
+      "description": "Serás responsable de ejecutar las estrategias de marketing de la empresa. Esto incluye la planificación, desarrollo e implementación de iniciativas de marketing y comunicaciones para promover los productos y servicios de la empresa, aumentar la cuota de mercado y mejorar la percepción de marca.",
+      "location": "Barcelona",
+      "mode":  "Remote",
+      "requirements": "No previous experience",
+      "logo": "https://img.europapress.es/fotoweb/fotonoticia_20220125135218_690.jpg"
     }
   ]
+  */

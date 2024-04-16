@@ -1,11 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 3000;
 
 // Rutas
 const usersRoutes = require("./routes/users.routes")
-const adminRoutes = require("./routes/admin.routes")
-const nologgedRoutes = require("./routes/nolog.routes")
+const adsRoutes= require("./routes/ads.routes")
 
 
 // IMPORTAR MIDDLEWARES
@@ -15,7 +15,7 @@ const morgan = require('./middlewares/morgan')
 
 // USO MIDDLEWARES
 app.use(express.json());
-app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
+//app.use(morgan(':method :host :status :param[id] - :response-time ms :body'));
 app.use(express.static('public')); // nueva linea (debajo uso middlewars)
 
 app.use(express.static('public'));
@@ -39,9 +39,7 @@ app.get('/login', function(req, res){
 
 // ENDPOINTS API
 app.use('/api/users', usersRoutes);
-app.use('/api/nologged',nologRoutes);
-app.use('/api/admin',adminRoutes);
-//app.use("./api/ads",adsRoutes);
+app.use("/api/ads",adsRoutes);
 
 
 

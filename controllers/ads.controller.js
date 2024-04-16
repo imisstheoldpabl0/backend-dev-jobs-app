@@ -13,12 +13,21 @@ const createAds = async (req, res) => {
     }
 }
 
+/* //READ
+async function readAllAds() {
+    const ads = await Ads
+    console.log(ads);
+    res.status(200).json({
+    });
+} */
+
 //UPDATE ads
+
 const updateAds = async (req, res) => {
     try {
-        const time = req.params.time;
+        const id = req.params.id;
         const newData = req.body;
-        let ads = await Ads.updateOne({time}, newData)
+        let ads = await Ads.updateOne({id}, newData)
         res.status(200).json(ads);
     } 
     catch (error) {
@@ -42,6 +51,7 @@ const deleteAds = async (req, res) => {
 
 module.exports = {
     createAds,
+    //readAllAds,
     updateAds,
     deleteAds
 }

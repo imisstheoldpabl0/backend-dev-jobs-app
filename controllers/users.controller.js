@@ -1,4 +1,4 @@
-const users = require('../models/admin.model');
+//const users = require('../models/admin.model');
 
 /* ----- USERS ----- */
 // Faltan cosas revisar
