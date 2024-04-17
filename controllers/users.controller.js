@@ -1,4 +1,5 @@
-//const users = require('../models/admin.model');
+const { models } = require('mongoose');
+const users = require('../models/users.model');
 
 /* ----- USERS ----- */
 // Faltan cosas revisar
@@ -13,17 +14,35 @@ const createUser = async (req, res) => {
 }
 
 /* ----- ADMIN ----- */
+
 // getAllUsers
 const getAllUsers = async (req, res) => {
-    // comprobar que el usuario es admin
-    const allUsers = req.body;
-    const response = await entry.getAllUsers(allUsers);
-    res.status(201).json({
-        msg: "usuarios listados",
-        "items_updated": response,
-        data: allUsers
-    });
+    const usersListObj = {};
+    usersListObj = queries.getAllUsers();
+    request.queries
+
+ /*    request.query("select quantity from table WHERE type = 'apple'", function (err, recordset) {
+        var arrayLength = recordset.length;
+        for (var i = 0; i < arrayLength; i++) {
+          console.log(recordset[i]["quantity"]);
+        };
+   */
+    try {
+        let list = await getAllUsers();
+        res.status(200).json(list);
+    }
+    catch (error) {
+        console.log('Error. Cannot get users list.');
+        res.status(400).json({msj:`ERROR: ${error.stack}`});
+    }
+    return list
 }
+       
+
+    
+
+  
+
 
 const deleteUser = async (req, res) => {}
 
