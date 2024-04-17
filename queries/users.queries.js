@@ -2,7 +2,7 @@ const usersQueries = {
 
     //Crea un listado de todos los usuarios. Para la /dasboard en admin
     getAllUsers: `
-        SELECT *  FROM users
+    SELECT *  FROM users
     `,
 
     //Recupera  los datos de un usuario: para visualizar los  datos del propio  perfil (admin y user)
@@ -13,11 +13,12 @@ const usersQueries = {
 
     // Crea un usuario nuevo. Cuando alguien se registra (candidato) o cuando el admin da de alta a otro admin.
     createUser: `
-    INSERT INTO users ( 
-        rol,
-        email,
-        password)
-    VALUES ($1, $2);
+    INSERT INTO users (
+        name NOT NULL,
+        surname NOT NULL,
+        email NOT NULL,
+        password NOT NULL)
+    VALUES ($1, $2, $3, $4);
     `,
 
     // Actualiza datos del usuario. Si se actualizan los datos del propio perfil, o el admin  el perfil  de  otro usuario.
@@ -34,8 +35,8 @@ const usersQueries = {
 
     // Cambia log_status en users a true
     updateToLogin: `
-     UPDATE users 
-     SET log_status=true  
+    UPDATE users 
+    SET log_status=true  
     WHERE email = $1 && password = $2;
     `,
 

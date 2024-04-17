@@ -8,19 +8,20 @@ const createUser = async (req, res) => {
     const response = await users.createUser(newUser);
     res.status(201).json({
         "user_created": response,
-        data: modifiedEntry
+        data: newUser
     });
 }
 
 /* ----- ADMIN ----- */
 // getAllUsers
 const getAllUsers = async (req, res) => {
-    const modifiedEntry = req.body;
-    const response = await entry.getAllUsers(modifiedEntry);
+    // comprobar que el usuario es admin
+    const allUsers = req.body;
+    const response = await entry.getAllUsers(allUsers);
     res.status(201).json({
         msg: "usuarios listados",
         "items_updated": response,
-        data: modifiedEntry
+        data: allUsers
     });
 }
 

@@ -2,15 +2,15 @@
 -- QUERIES DE INICIO
 
 -- Create users table
-
 CREATE TABLE users (
     id_user serial NOT NULL PRIMARY KEY, 
-    rol varchar (12) NOT NULL DEFAULT 'candidate',
     name varchar(45) NOT NULL, 
-    surname varchar(45) NOT NULL, 
+    surname varchar(45) NOT NULL,
+    location varchar(45) NOT NULL, 
     email varchar(255) NOT NULL UNIQUE,
     password varchar (12) NOT NULL,
-    profile_pic varchar (255), 
+    profile_pic varchar (255),
+    rol varchar (12) NOT NULL DEFAULT 'candidate',
     log_status boolean DEFAULT false
 );
 
@@ -25,16 +25,16 @@ CREATE TABLE favorites (
 
 
 -- Insertar datos en tabla users
-INSERT INTO users (rol, name, surname,email,password)
+INSERT INTO users (name, surname, location, email, password, profile_pic, rol, log_status)
 VALUES
-('admin','María','Torres', 'mariatorres@jobapp.com','amllsñlkj'),
-('admin','Borja','Ramírez', 'borja@jobapp.com','dkecij6873'),
-('candidate','Adam','Hollister', 'adam@gmail.com','alkjehyyat'),
-('candidate','Jennifer','Strauss', 'jenny@yahoo.com','dkekkcise45'),
-('candidate','Ariadna','Alexander', 'gema@yahoo.com','6234¿¿eeds'),
-('candidate','Steven','Marshall', 'steve@gmail.com','ñllkejña'),
-('candidate','Roberta','del Pino', 'roberta@terra.com','ñalkjeñf'),
-('candidate','Carlos','Sotomayor', 'carlos@gmail.com','añklejñs');
+    ('John', 'Doe', 'New York', 'john.doe@example.com', 'password123', 'profile.jpg', 'candidate', false),
+    ('Jane', 'Smith', 'London', 'jane.smith@example.com', 'password456', 'profile.jpg', 'candidate', false),
+    ('Michael', 'Johnson', 'Los Angeles', 'michael.johnson@example.com', 'password789', 'profile.jpg', 'candidate', false),
+    ('Sarah', 'Williams', 'Paris', 'sarah.williams@example.com', 'passwordabc', 'profile.jpg', 'candidate', false),
+    ('David', 'Brown', 'Berlin', 'david.brown@example.com', 'passworddef', 'profile.jpg', 'candidate', false),
+    ('Emily', 'Taylor', 'Sydney', 'emily.taylor@example.com', 'passwordghi', 'profile.jpg', 'candidate', false),
+    ('Daniel', 'Anderson', 'Tokyo', 'daniel.anderson@example.com', 'passwordjkl', 'profile.jpg', 'candidate', false),
+    ('Olivia', 'Martinez', 'Rome', 'olivia.martinez@example.com', 'passwordmno', 'profile.jpg', 'candidate', false);
 
 -- ADMIN QUERIES /api/user
 const AdminQueries = {
