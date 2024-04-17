@@ -1,15 +1,16 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 3000;
 
 // Rutas
+const adsRoutes= require("./routes/ads.routes")
 const usersRoutes = require("./routes/users.routes");
 const apiSearchRoutes = require("./routes/apisearch.routes");
 
+
 // IMPORTAR MIDDLEWARES
 //const morgan = require('./middlewares/morgan')
-
-
 
 // USO MIDDLEWARES
 app.use(express.json());
@@ -66,7 +67,7 @@ app.get('/profile', function(req, res){
 
 // ENDPOINTS API
 app.use('/api/users', usersRoutes);
-//app.use("./api/ads",adsRoutes);
+app.use('/api/ads',adsRoutes);
 app.use('/api/search', apiSearchRoutes);
 
 
