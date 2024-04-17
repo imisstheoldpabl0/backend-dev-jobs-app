@@ -25,12 +25,12 @@ html(lang="en")
         main
             section(id="signUp")
                 h1 Home
-                form(action="./api/search" method="get")
+                form(action="/api/search" method="get")
 
-                // Input para ingresar puestos de trabajo
-                label(for="jobTitle") Job Title: 
-                input(type="text" id="jobTitle" name="jobTitle" required)
-                // Botón de búsqueda
-                button(type="submit") Search
+                    // Input para ingresar puestos de trabajo
+                    label(for="jobTitle") Job Title: 
+                    input(type="text" id="jobTitle" name="jobTitle" required)
+                    // Botón de búsqueda
+                    button() Search
 
         script(src="./script.js")
