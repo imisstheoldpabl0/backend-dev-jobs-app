@@ -1,27 +1,50 @@
 # backend-dev-jobs-app
 
-Repositorios útiles:
-    demo-express-jwt
-        users admin/member
-        TokenSecret
-        Hacer log-in y log-out
 
-    API_REST_jwt_nodemailer
-        Relación de controlador-rutas con Pug
-        Capture all 404 errors
-        JSON web token (jst) 
-        Nodemailer para mandar correos automáticamente (recuperar contraseña)
-        Validación de correo y contraseña con RegEx
-        Funciones de log-in, sign-up, recover y reset password y log-out
+##Job App
 
-    Ejercicio_API_REST_MongoDB
-        Rutas-controllers-models con MongoDB
+## Table of Contents
+1. About
+2. Tecnologies
+3. Features
+4. Members
 
-    Ejercicio_API_REST_SQL_entries_authors
-        Rutas-controllers-models con SQL
 
-    GoogleAuth_Passport_Demo
-        Autentificación con Google
+## 1. Introducción
 
-    nodejs-scraping-blackfriday-workshop-ene-22
-        Web scraping con Puppeteer
+-----
+### MOBILE
+-
+
+### IPAD
+-
+### DESKTOP
+
+-
+
+## 2. Tecnologies
+
+Las tecnologías usadas en este quiz son las siguientes:
+1. Node.js
+2. Express
+3. SQL
+4. Elephant
+5. Web Scraping
+6. Pug templates
+
+
+
+## 3. Features
+
+
+
+
+
+
+## 4. Design
+
+
+
+
+## 5. Colaboration
+
