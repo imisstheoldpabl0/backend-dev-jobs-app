@@ -35,8 +35,8 @@ document.querySelector("#search").addEventListener("click", () => {
                 <p>${data[i].company_name}</p>
                 <p>${data[i].description}</p>
                 <p>${data[i].location}</p>
-                <p>${data[i].logo}</p>
-                <a href=${data[i].link}>More info.</a>
+                <img src=${data[i].logo}>
+                <a href=${data[i].link}>MORE INFO</a>
                 </div>
                 `;
             }
