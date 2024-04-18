@@ -70,7 +70,7 @@ const scrap = async (url) => {
 
         console.log("url capuradas", urls)
         // Me quedo con los 20 primeros productos, porque sino es muy largo
-        const urls2 = urls.slice(0, 9);
+        const urls2 = urls.slice(0, 7);
 
         // Filtramos los productos
         // Extraemos el dato de cada producto
