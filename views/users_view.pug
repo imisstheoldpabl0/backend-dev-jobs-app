@@ -6,13 +6,12 @@ html(lang="en")
     link(rel="stylesheet", href="./style.css")
     title users
   body 
-
-  include ./header.pug
-    h1 All users
-
-      each user in data
-        ul 
-          li e-mail: #{user.name}
-          li user: #{user.surname}
-          li password: #{user.email}
-
+    include ./header.pug
+    main
+      h1 All users
+        each user in data
+          ul 
+            li e-mail: #{user.name}
+            li user: #{user.surname}
+            li password: #{user.email}
+    script(src="./script.js")

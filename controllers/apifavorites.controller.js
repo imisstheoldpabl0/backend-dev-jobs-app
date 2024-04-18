@@ -1,5 +1,4 @@
-//const Ads= require("../glassdoor.json");
-//const addFavorite= require("../models/favorites.model");
+const addFavorite= require("../models/favorites.model");
 
 
 // CREATE favorite
