@@ -6,12 +6,12 @@
 }
 
 main {
-    width:auto;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 
@@ -26,7 +26,7 @@ form {
     display: grid;
     align-items: center;
     width: 90%;
-    height:auto;
+    height: auto;
     margin: auto;
     max-width: 400px;
     border-radius: 1 em;
@@ -37,15 +37,15 @@ form {
 
 
 label {
-    margin:15px ;
+    margin: 15px;
     margin-bottom: 5px;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 
 input {
-    margin:15px;
-    margin-top:5px;
+    margin: 15px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -54,7 +54,7 @@ button {
     width: 92%;
     height: 25px;
     margin: 15px;
-    color:#482ff7;
+    color: #482ff7;
     border: 1.5px solid #482ff7;
 }
 
@@ -80,13 +80,13 @@ h3 {
     align-items: left;
     margin-top: 30px;
     margin-bottom: 5px;
-    margin-left:23px;
+    margin-left: 23px;
 }
 
 #userMail {
-    margin:15px ;
+    margin: 15px;
     margin-bottom: 5px;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 
@@ -95,7 +95,7 @@ h3 {
     display: grid;
     align-items: left;
     width: 90%;
-    height:auto;
+    height: auto;
     margin-top: 100px;
     margin-left: 5px;
     max-width: 400px;
@@ -108,8 +108,8 @@ h3 {
 
 #jobTitle {
     width: 92%;
-    margin:15px;
-    margin-top:10px;
+    margin: 15px;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
@@ -119,8 +119,8 @@ h3 {
 
 
 #email {
- margin-left: 10px;
- margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -141,22 +141,22 @@ h3 {
 
 
 #userPassword {
-    margin:15px;
-    margin-top:5px;
+    margin: 15px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 
 #siginMail {
-    margin:15px ;
+    margin: 15px;
     margin-bottom: 5px;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 
 #siginPassword {
-    margin:15px;
-    margin-top:5px;
+    margin: 15px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -166,7 +166,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     width: 90%;
-    margin-left:5px;
+    margin-left: 5px;
 
     input {
         margin-bottom: 24px;
@@ -174,7 +174,7 @@ h3 {
 }
 
 
-#signIn{
+#signIn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,19 +183,19 @@ h3 {
 }
 
 
- #form_profile {
+#form_profile {
     background-color: white;
     display: grid;
     align-items: left;
     width: 90%;
-    height:auto;
+    height: auto;
     margin-top: 5px;
     margin-left: 20px;
     border-radius: 1 em;
     border: 2px solid #101010;
     padding-top: 10px;
     font-size: small;
-} 
+}
 
 #profile {
     width: 90%;
@@ -267,7 +267,7 @@ h3 {
 
 .logout {
     width: 90%;
-    height:50px;
+    height: 50px;
     background-color: white;
     display: grid;
     justify-content: center;
@@ -293,7 +293,6 @@ h3 {
     a {
         text-decoration: none;
     }
-}
 
     .navbar {
         display: flex;
@@ -342,142 +341,142 @@ h3 {
         color: #482ff7;
     }
 
-@media only screen and (min-width: 700px) {
+    @media only screen and (min-width: 700px) {
 
-    main {
-        width:auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    form {
-        background-color: white;
-        display: grid;
-        align-items: center;
-        width: 90%;
-        height:auto;
-        margin: auto;
-        max-width: 400px;
-        border-radius: 1 em;
-        border: 2px solid #101010;
-        padding-top: 10px;
-        font-size: small;
-    }
-    
-    
-    label {
-        margin:15px ;
-        margin-bottom: 5px;
-        margin-top:5px;
-    }
-    
-    
-    input {
-        margin:15px;
-        margin-top:5px;
-        margin-bottom: 5px;
-    }
-    
-    
-    button {
-        width: 92%;
-        height: 25px;
-        margin: 15px;
-        color:#482ff7;
-        border: 1.5px solid #482ff7;
-    }
-    
-    
-    p {
-        margin-bottom: 15px;
-    }
-    
-    
-    h1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    
-    
-    h3 {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        margin-top: 30px;
-        margin-bottom: 5px;
-        margin-left:23px;
-    }
-    
-    #userMail {
-        margin:15px ;
-        margin-bottom: 5px;
-        margin-top:5px;
-    }
-    
-    
-    #home {
-        background-color: white;
-        display: grid;
-        align-items: left;
-        width: 90%;
-        height:auto;
-        margin-top: 100px;
-        margin-left: 20px;
-        max-width: 400px;
-        border-radius: 1 em;
-        border: 2px solid #101010;
-        padding-top: 10px;
-        font-size: small;
-    }
-    
-    
-    #jobTitle {
-        width: 92%;
-        margin:15px;
-        margin-top:10px;
-        margin-bottom: 5px;
-    }
-    
-    
-    #userPassword {
-        margin:15px;
-        margin-top:5px;
-        margin-bottom: 5px;
-    }
-    
-    #siginMail {
-        margin:15px ;
-        margin-bottom: 5px;
-        margin-top:5px;
-    }
-    
-    
-    #siginPassword {
-        margin:15px;
-        margin-top:5px;
-        margin-bottom: 5px;
-    }
-    
-    #signUp {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        margin-left: 22px;
-    
-        input {
-            margin-bottom: 24px;
+        main {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-    }
-    
-    
-   /*  #signInForm {
+
+
+        form {
+            background-color: white;
+            display: grid;
+            align-items: center;
+            width: 90%;
+            height: auto;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 1 em;
+            border: 2px solid #101010;
+            padding-top: 10px;
+            font-size: small;
+        }
+
+
+        label {
+            margin: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+
+        input {
+            margin: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+
+        button {
+            width: 92%;
+            height: 25px;
+            margin: 15px;
+            color: #482ff7;
+            border: 1.5px solid #482ff7;
+        }
+
+
+        p {
+            margin-bottom: 15px;
+        }
+
+
+        h1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+
+        h3 {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            margin-left: 23px;
+        }
+
+        #userMail {
+            margin: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+
+        #home {
+            background-color: white;
+            display: grid;
+            align-items: left;
+            width: 90%;
+            height: auto;
+            margin-top: 100px;
+            margin-left: 20px;
+            max-width: 400px;
+            border-radius: 1 em;
+            border: 2px solid #101010;
+            padding-top: 10px;
+            font-size: small;
+        }
+
+
+        #jobTitle {
+            width: 92%;
+            margin: 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+
+        #userPassword {
+            margin: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #siginMail {
+            margin: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+
+        #siginPassword {
+            margin: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #signUp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-left: 22px;
+
+            input {
+                margin-bottom: 24px;
+            }
+        }
+
+
+        /*  #signInForm {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -485,50 +484,50 @@ h3 {
         width: 90%;
     } */
 
-    #signInForm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        margin-left: 22px;
-    
-        input {
-            margin-bottom: 24px;
+        #signInForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-left: 22px;
+
+            input {
+                margin-bottom: 24px;
+            }
+        }
+
+
+        #userMail {
+            width: 92%;
+            height: 20px;
+            margin: 15px;
+        }
+
+        #userPassword {
+            width: 92%;
+            height: 20px;
+            margin: 15px;
+        }
+
+
+        .logout {
+            width: 90%;
+            height: 50px;
+            background-color: white;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            margin-left: 22px;
+            max-width: 400px;
+            border-radius: 1 em;
+            border: 2px solid #101010;
+            padding-top: 10px;
+            font-size: small;
         }
     }
-    
-    
-    #userMail {
-        width: 92%;
-        height: 20px;
-        margin: 15px;
-    }
-    
-    #userPassword {
-        width: 92%;
-        height: 20px;
-        margin: 15px;
-    }
-    
-    
-    .logout {
-        width: 90%;
-        height:50px;
-        background-color: white;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin-top: 100px;
-        margin-left: 22px;
-        max-width: 400px;
-        border-radius: 1 em;
-        border: 2px solid #101010;
-        padding-top: 10px;
-        font-size: small;
-    }
-    }
 
-@media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: 1080px) {
         .nav-menu {
             position: fixed;
             left: -100%;
@@ -575,4 +574,5 @@ h3 {
             transform: translateY(-8px) rotate(-45deg);
         }
 
-    } 
+    }
+}
