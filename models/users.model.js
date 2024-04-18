@@ -3,6 +3,7 @@ const pool = require('../config/db_pgsql');
 const queries = require('../queries/users.queries.js')
 
 
+
 // Crea un usuario - POST
 const createUser = async (newUser) => {
     const { name, surname, location, email, password } = newUser;
