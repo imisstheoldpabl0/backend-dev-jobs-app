@@ -13,7 +13,7 @@ const getJob = async (req, res) => {
         let jobs = await Ads.find({ title: {$regex: title, $options: 'i'} }, '-_id -__v'); //{}
         
         res.status(200).json(jobs); // Respuesta de la API para 1 producto
-        console.log('esto es lo que has buscado ' + jobs);
+        console.log('esto es lo que has buscado: ' + jobs);
     }
     catch (error) {
         console.log(`ERROR: ${error.stack}`);

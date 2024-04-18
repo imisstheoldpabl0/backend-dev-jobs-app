@@ -22,6 +22,8 @@ document.querySelector("#search").addEventListener("click", () => {
     let userResult = document.getElementById("jobTitle").value
     console.log(userResult);
 
+    document.querySelector("#jobOffers").innerHTML = ``;
+
     fetch(`http://localhost:3000/api/search?title=${userResult}`)// Fetches the provided URL with parameters from the user
         .then(res => res.json())
         .then(data => {
