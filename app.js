@@ -71,7 +71,7 @@ app.get('/profile', function(req, res){
   });
 
 // ENDPOINTS API
-app.use('/api/users', usersRoutes);
+app.use('/', usersRoutes);
 app.use('/api/ads',adsRoutes);
 app.use('/api/search', apiSearchRoutes);
 

@@ -20,7 +20,7 @@ CREATE TABLE favorites (
     id_favorite serial NOT NULL PRIMARY KEY, 
     id_user int,
     FOREIGN KEY (id_user) REFERENCES users(id_user),
-    id_job int NOT NULL FOREIGN KEY
+    id_job int NOT NULL
 );
 
 
@@ -76,3 +76,7 @@ const commonQueries = {
     SET log_status = TRUE
     WHERE email = $1 AND password = $2;`
 };
+
+-- ROL checking
+
+

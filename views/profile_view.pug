@@ -10,14 +10,23 @@ html(lang="en")
     h1 Profile
     img(src='' alt='')
     form(action="./profile_view.pug" method="post")
-      // Input para ingresar los datos
+      // Datos de perfil a editar
       label(for="datoName") Nombre:
       input(type="text" id="datoName" name="datoName" required)
+      label(for="Surname") Surname :
+      input(type="text" id="idSurname" name="surname" required)
       label(for="datoEmail") Email:
-      input(type="text" id="datoEmail" name="datoEmail" required)
-      
-      // Botón de búsqueda
-      button(type="submit") Editar
+      input(type="text" id="idEmail" name="email" required)
+      label(for="datoPassword") Password:
+      input(type="text" id="idPassword" name="password" required)
+      label(for="datoImage") Password:
+      input(type="text" id="idImage" name="datoImage" required)
+         // Botón de cargar imagen
+      button(type="button") search image
+      img(src="", alt="")   
+      // Botón de edición
+      button(type="submit") Update
       img(src="", alt="")
+
 
       script(src="./script.js")

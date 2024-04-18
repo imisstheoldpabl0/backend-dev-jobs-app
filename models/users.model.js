@@ -1,7 +1,26 @@
-const { Pool } = require('pg');
+//const { Pool } = require('pg');
 const pool = require('../config/db_pgsql');
+const queries = require('../queries/users.queries')
 
-const queries = require('./queries/users.queries')
+// Verificación de rol
+
+/* const getRol = async () => {
+    let client, resullt;
+    try{
+        client = await pool.connect(); // Espera a abrir conexion
+        const data = await client.query("SELECT * FROM authors;"/* queries.getEntriesByEmail, [email] );
+        result = data.rows;
+    } catch (err) {
+        console.log(err);
+        throw err;
+    } finally {
+        client.release();
+    }
+    return result;
+    }
+ */
+
+
 
 // CREATE - POST /api/user (ejemplo archivo queries)
 const createUser = async (user) => {
@@ -25,19 +44,19 @@ const createUser = async (user) => {
 };
 
 // READ - GET methods
-const getAllUsers = async () => {
+const getAllUsers = async (list) => {
   let client,result;
   try{
       client = await pool.connect();
-      const data = await client.query(queries.getAllUsers)
-      result = data.rows
-  }catch(err){
+      result = await client.json();
+      return result
+  }  catch(err) {
       console.log(err);
       throw err;
   }finally{
       client.release();    
-  }
-  return result
+  } 
+ 
 }
 
 // UPDATE - PUT methods
@@ -45,9 +64,9 @@ const updateUser = async () => {
   let client,result;
   try{
       client = await pool.connect();
-      const data = await client.query(queries.updateUser)
+      const data = await client.query(queries.updateUser);
       result = data.rows
-  }catch(err){
+  } catch(err) {
       console.log(err);
       throw err;
   }finally{
@@ -55,9 +74,10 @@ const updateUser = async () => {
   }
   return result
 }
+const models = {
+    createUser,
+    getAllUsers,
+    updateUser
+  }
 
-modules.exports = {
-  createUser,
-  getAllUsers,
-  updateUser
-}
+module.exports=models;

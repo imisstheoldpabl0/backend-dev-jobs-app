@@ -1,4 +1,6 @@
-//const users = require('../models/admin.model');
+require('dotenv').config();
+const { models } = require('mongoose');
+const users = require('../models/users.model');
 
 /* ----- USERS ----- */
 // Faltan cosas revisar
@@ -12,18 +14,25 @@ const createUser = async (req, res) => {
     });
 }
 
-/* ----- ADMIN ----- */
+// USERS TABLE
 // getAllUsers
 const getAllUsers = async (req, res) => {
-    // comprobar que el usuario es admin
-    const allUsers = req.body;
-    const response = await entry.getAllUsers(allUsers);
-    res.status(201).json({
-        msg: "usuarios listados",
-        "items_updated": response,
-        data: allUsers
-    });
+   
+  try {
+    let users = await users.getAllUsers();
+    }
+    catch (error) {
+        console.log('Error. Cannot get users list.');
+        res.status(400).json({msj:`ERROR: ${error.stack}`});
+    }
+    res.status(200).json(entries);  // [] con los usuarios recuperados
 }
+       
+
+    
+
+  
+
 
 const deleteUser = async (req, res) => {}
 
