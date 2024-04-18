@@ -8,19 +8,19 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
-/* const getJob = async (id = "") => {
-    let response = await fetch(`https://fakestoreapi.com/products/${id}`); //{} o [{},{},{},{}]
-    let products = await response.json(); //{} o [{},{},{},{}]
+function showFav() {
+    while (document.querySelector(".jobCard")) {
+        document.querySelector(".checkbox").addEventListener("click", () => {
+            let userFav = document.getElementById("favorite").checked
+            console.log("Esto es el resultado checked: " + userFav);
+        });
+    }
+}
 
-    if (Array.isArray(products)) return products;
-    else return [products]; // Siempre sea un [{}]
-}; */
-
-/* HOME PAGE - SEARCH */
-
+/* ----- SEARCH RESULTS ----- */
 document.querySelector("#search").addEventListener("click", () => {
     let userResult = document.getElementById("jobTitle").value
-    console.log(userResult);
+    //console.log(userResult);
 
     document.querySelector("#jobOffers").innerHTML = ``;
 
@@ -28,24 +28,33 @@ document.querySelector("#search").addEventListener("click", () => {
         .then(res => res.json())
         .then(data => {
             for (let i = 0; i < data.length; i++) {
-            document.querySelector("#jobOffers").innerHTML += `
+                document.querySelector("#jobOffers").innerHTML += `
                 <div class='jobCard'>
                 <h2>Results:</h2>
                 <h3>${data[i].title}</h3>
                 <p>${data[i].company_name}</p>
                 <p>${data[i].description}</p>
                 <p>${data[i].location}</p>
+                <img src=${data[i].logo}>
                 <p>${data[i].logo}</p>
                 <a href=${data[i].link}>More info.</a>
+                <input type="checkbox" id="favorite${i}" class="checkbox" name="favorite">
                 </div>
                 `;
             }
+            return data;
         })
+        .then(data => {
+            for (let i = 0; i < data.length; i++) {
+                document.getElementById(`favorite${i}`).addEventListener("click", () => {
+                    console.log(`Hola, estás guardando como favorito la oferta número: ${i}`);
+                });
+            }
+        })
+    });
 
-    
-});
 
 
-module.exports = {
-    getSearchData,
-}
+
+
+
