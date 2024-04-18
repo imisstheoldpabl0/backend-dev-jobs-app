@@ -25,22 +25,19 @@ const getAllUsers = async (req, res) => {
         console.log('Error. Cannot get users list.');
         res.status(400).json({msj:`ERROR: ${error.stack}`});
     }
-    res.status(200).json(entries);  // [] con los usuarios recuperados
+    res.status(200).json(users);  // [] con los usuarios recuperados
 }
-       
 
-    
+const deleteUser = async (req, res) => {
 
-  
-
-
-const deleteUser = async (req, res) => {}
+}
 
 module.exports = {
     createUser,
     getAllUsers,
     deleteUser
 }
+
 
 
 
