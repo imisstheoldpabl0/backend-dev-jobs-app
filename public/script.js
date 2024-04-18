@@ -7,3 +7,43 @@ function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 }
+
+/* const getJob = async (id = "") => {
+    let response = await fetch(`https://fakestoreapi.com/products/${id}`); //{} o [{},{},{},{}]
+    let products = await response.json(); //{} o [{},{},{},{}]
+
+    if (Array.isArray(products)) return products;
+    else return [products]; // Siempre sea un [{}]
+}; */
+
+/* HOME PAGE - SEARCH */
+
+document.querySelector("#search").addEventListener("click", () => {
+    let userResult = document.getElementById("jobTitle").value
+    console.log(userResult);
+
+    fetch(`http://localhost:3000/api/search?title=${userResult}`)// Fetches the provided URL with parameters from the user
+        .then(res => res.json())
+        .then(data => {
+            for (let i = 0; i < data.length; i++) {
+            document.querySelector("#jobOffers").innerHTML += `
+                <div class='jobCard'>
+                <h2>Results:</h2>
+                <h3>${data[i].title}</h3>
+                <p>${data[i].company_name}</p>
+                <p>${data[i].description}</p>
+                <p>${data[i].location}</p>
+                <p>${data[i].logo}</p>
+                <a href=${data[i].link}>More info.</a>
+                </div>
+                `;
+            }
+        })
+
+    
+});
+
+
+module.exports = {
+    getSearchData,
+}
