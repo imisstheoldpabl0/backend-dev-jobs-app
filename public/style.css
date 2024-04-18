@@ -3,233 +3,396 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
-main {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-
-body {
-    width: auto;
-    background-color: #cdd0d5;
-}
+    main {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
 
 
-form {
-    background-color: white;
-    display: grid;
-    align-items: center;
-    width: 90%;
-    height: auto;
-    margin: auto;
-    max-width: 400px;
-    border-radius: 1 em;
-    border: 2px solid #101010;
-    padding-top: 10px;
-    font-size: small;
-}
+    body {
+        width: auto;
+        background-color: #cdd0d5;
+    }
 
 
-label {
-    margin: 15px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
+    form {
+        background-color: white;
+        display: grid;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        max-width: 400px;
+        border-radius: 1 em;
+        border: 2px solid #101010;
+        padding-top: 10px;
+        font-size: small;
+    }
 
 
-input {
-    margin: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
+    label {
+        margin: 15px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
 
-
-button {
-    width: 92%;
-    height: 25px;
-    margin: 15px;
-    color: #482ff7;
-    border: 1.5px solid #482ff7;
-}
-
-
-p {
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
-
-
-h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-top: 30px;
-    margin-bottom: 5px;
-    margin-left: 23px;
-}
-
-#userMail {
-    margin: 15px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-
-#home {
-    background-color: white;
-    display: grid;
-    align-items: left;
-    width: 90%;
-    height: auto;
-    margin-top: 100px;
-    margin-left: 5px;
-    max-width: 400px;
-    border-radius: 1 em;
-    border: 2px solid #101010;
-    padding-top: 10px;
-    font-size: small;
-}
-
-
-#jobTitle {
-    width: 92%;
-    margin: 15px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-#jobDescription {
-    margin-top: 10px;
-}
-
-
-#email {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-
-#userName {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#password {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#passwordR {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-
-#userPassword {
-    margin: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-
-#siginMail {
-    margin: 15px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-
-#siginPassword {
-    margin: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-
-#signUp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-left: 5px;
 
     input {
-        margin-bottom: 24px;
+        margin: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
-}
 
 
-#signIn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-left: 22px;
-}
+    button {
+        width: 92%;
+        height: 25px;
+        margin: 15px;
+        color: #482ff7;
+        border: 1.5px solid #482ff7;
+    }
 
 
-#form_profile {
-    background-color: white;
-    display: grid;
-    align-items: left;
-    width: 90%;
-    height: auto;
-    margin-top: 5px;
-    margin-left: 20px;
-    border-radius: 1 em;
-    border: 2px solid #101010;
-    padding-top: 10px;
-    font-size: small;
-}
-
-#profile {
-    width: 90%;
-    height: auto;
-}
+    p {
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
 
 
-#userMail {
-    width: 92%;
-    height: 20px;
-    margin: 15px;
-}
-
-#userPassword {
-    width: 92%;
-    height: 20px;
-    margin: 15px;
-}
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
 
-.logout {
-    width: 90%;
-    height: 50px;
-    background-color: white;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-left: 5px;
-    max-width: 400px;
-    border-radius: 1 em;
-    border: 2px solid #101010;
-    padding-top: 10px;
-    font-size: small;
+    h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        margin-left: 23px;
+    }
+
+    #userMail {
+        margin: 15px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+
+    #home {
+        background-color: white;
+        display: grid;
+        align-items: left;
+        width: 90%;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 5px;
+        max-width: 400px;
+        border-radius: 1 em;
+        border: 2px solid #101010;
+        padding-top: 10px;
+        font-size: small;
+    }
+
+
+    #jobTitle {
+        width: 92%;
+        margin: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    #jobDescription {
+        margin-top: 10px;
+    }
+
+
+    #email {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    #userName {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #password {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #passwordR {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    #userPassword {
+        margin: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+
+    #siginMail {
+        margin: 15px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+
+    #siginPassword {
+        margin: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+
+    #signUp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-left: 5px;
+
+        input {
+            margin-bottom: 24px;
+        }
+    }
+
+
+    #signIn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-left: 22px;
+    }
+
+
+    #form_profile {
+        background-color: white;
+        display: grid;
+        align-items: left;
+        width: 90%;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 20px;
+        border-radius: 1 em;
+        border: 2px solid #101010;
+        padding-top: 10px;
+        font-size: small;
+    }
+
+    #profile {
+        width: 90%;
+        height: auto;
+    }
+
+    #userMail {
+        width: 92%;
+        height: 20px;
+        margin: 15px;
+    }
+
+    #userPassword {
+        width: 92%;
+        height: 20px;
+        margin: 15px;
+    }
+
+    .logout {
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        margin-left: 5px;
+        max-width: 400px;
+        border-radius: 1 em;
+        border: 2px solid #101010;
+        padding-top: 10px;
+        font-size: small;
+    }
+
+    @media only screen and (min-width: 700px) {
+
+        main {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            background-color: white;
+            display: grid;
+            align-items: center;
+            width: 90%;
+            height: auto;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 1 em;
+            border: 2px solid #101010;
+            padding-top: 10px;
+            font-size: small;
+        }
+
+        label {
+            margin: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        input {
+            margin: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 92%;
+            height: 25px;
+            margin: 15px;
+            color: #482ff7;
+            border: 1.5px solid #482ff7;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+
+        h1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            margin-left: 23px;
+        }
+
+        #userMail {
+            margin: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        #home {
+            background-color: white;
+            display: grid;
+            align-items: left;
+            width: 90%;
+            height: auto;
+            margin-top: 100px;
+            margin-left: 20px;
+            max-width: 400px;
+            border-radius: 1 em;
+            border: 2px solid #101010;
+            padding-top: 10px;
+            font-size: small;
+        }
+
+        #jobTitle {
+            width: 92%;
+            margin: 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #userPassword {
+            margin: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #siginMail {
+            margin: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        #siginPassword {
+            margin: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #signUp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-left: 22px;
+
+            input {
+                margin-bottom: 24px;
+            }
+        }
+
+        #signInForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-left: 22px;
+
+            input {
+                margin-bottom: 24px;
+            }
+        }
+
+        #userMail {
+            width: 92%;
+            height: 20px;
+            margin: 15px;
+        }
+
+        #userPassword {
+            width: 92%;
+            height: 20px;
+            margin: 15px;
+        }
+
+        .logout {
+            width: 90%;
+            height: 50px;
+            background-color: white;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            margin-left: 22px;
+            max-width: 400px;
+            border-radius: 1 em;
+            border: 2px solid #101010;
+            padding-top: 10px;
+            font-size: small;
+        }
+    }
 }
 
 /* ----- NAVBAR ----- */
@@ -292,192 +455,6 @@ h3 {
         color: #482ff7;
     }
 
-    @media only screen and (min-width: 700px) {
-
-        main {
-            width: auto;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-
-        form {
-            background-color: white;
-            display: grid;
-            align-items: center;
-            width: 90%;
-            height: auto;
-            margin: auto;
-            max-width: 400px;
-            border-radius: 1 em;
-            border: 2px solid #101010;
-            padding-top: 10px;
-            font-size: small;
-        }
-
-
-        label {
-            margin: 15px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-
-
-        input {
-            margin: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-
-        button {
-            width: 92%;
-            height: 25px;
-            margin: 15px;
-            color: #482ff7;
-            border: 1.5px solid #482ff7;
-        }
-
-
-        p {
-            margin-bottom: 15px;
-        }
-
-
-        h1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-
-        h3 {
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            margin-top: 30px;
-            margin-bottom: 5px;
-            margin-left: 23px;
-        }
-
-        #userMail {
-            margin: 15px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-
-
-        #home {
-            background-color: white;
-            display: grid;
-            align-items: left;
-            width: 90%;
-            height: auto;
-            margin-top: 100px;
-            margin-left: 20px;
-            max-width: 400px;
-            border-radius: 1 em;
-            border: 2px solid #101010;
-            padding-top: 10px;
-            font-size: small;
-        }
-
-
-        #jobTitle {
-            width: 92%;
-            margin: 15px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-
-        #userPassword {
-            margin: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        #siginMail {
-            margin: 15px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-
-
-        #siginPassword {
-            margin: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        #signUp {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            margin-left: 22px;
-
-            input {
-                margin-bottom: 24px;
-            }
-        }
-
-
-        /*  #signInForm {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-    } */
-
-        #signInForm {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            margin-left: 22px;
-
-            input {
-                margin-bottom: 24px;
-            }
-        }
-
-
-        #userMail {
-            width: 92%;
-            height: 20px;
-            margin: 15px;
-        }
-
-        #userPassword {
-            width: 92%;
-            height: 20px;
-            margin: 15px;
-        }
-
-
-        .logout {
-            width: 90%;
-            height: 50px;
-            background-color: white;
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            margin-top: 100px;
-            margin-left: 22px;
-            max-width: 400px;
-            border-radius: 1 em;
-            border: 2px solid #101010;
-            padding-top: 10px;
-            font-size: small;
-        }
-    }
-
     @media only screen and (max-width: 1080px) {
         .nav-menu {
             position: fixed;
@@ -524,6 +501,32 @@ h3 {
         .hamburger.active .bar:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
+    }
+}
 
+#jobOffers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .jobCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin: 20px;
+        border-radius: 1 em;
+        border: 2px solid #101010;
+        font-size: 12px;
+        height: auto;
+
+        .jobCardInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px;
+        }
     }
 }

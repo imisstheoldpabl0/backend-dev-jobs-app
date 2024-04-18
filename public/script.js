@@ -28,21 +28,19 @@ document.querySelector("#search").addEventListener("click", () => {
         .then(res => res.json())
         .then(data => {
             for (let i = 0; i < data.length; i++) {
-            document.querySelector("#jobOffers").innerHTML += `
+                document.querySelector("#jobOffers").innerHTML += `
                 <div class='jobCard'>
-                <h2>Results:</h2>
-                <h3>${data[i].title}</h3>
-                <p>${data[i].company_name}</p>
-                <p>${data[i].description}</p>
-                <p>${data[i].location}</p>
-                <img src=${data[i].logo}>
-                <a href=${data[i].link}>MORE INFO</a>
+                    <h3>${data[i].title}</h3>
+                    <div class='jobCardInfo'>
+                        <p>${data[i].company_name}</p>
+                        <p>${data[i].location}</p>
+                    <p>${data[i].description}</p>
+                    <img src=${data[i].logo}>
+                    <a href=${data[i].link}>MORE INFO</a>
                 </div>
                 `;
             }
         })
-
-    
 });
 
 
