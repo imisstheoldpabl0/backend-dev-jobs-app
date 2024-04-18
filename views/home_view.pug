@@ -8,13 +8,10 @@ html(lang="en")
     body
         include ./header.pug
         main
-            section(id="signUp")
+            section(id="home")
                 h1 Home
-                form(action="/api/search" method="get")
-
-                    // Input para ingresar puestos de trabajo
-                    label(for="jobTitle") Job Title: 
                     input(type="text" id="jobTitle" name="jobTitle" required)
                     // Botón de búsqueda
-                    button() Search
+                    button(id="search") Search
+            section(id="jobOffers")
         script(src="./script.js")
