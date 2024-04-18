@@ -8,9 +8,9 @@ html(lang="en")
     body
         include ./header.pug
         main
-            h1 JobApp
-            h3 Sign In
-            form(action="./film" method="post" id="signInForm")
+           h1 Sign In
+           section(id="signIn")
+            form(action="./user" method="post")
                 label(for="email" id="siginMail") Email: 
                 input(type="text" id="userMail" name="userMail" required)
                 
