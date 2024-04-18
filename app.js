@@ -7,7 +7,11 @@ const port = 3000;
 const adsRoutes= require("./routes/ads.routes")
 const usersRoutes = require("./routes/users.routes");
 const apiSearchRoutes = require("./routes/apisearch.routes");
+
 const apiLoginRoutes = require("./routes/login.routes");
+
+const apiFavoritesRoutes= require("./routes/favorites.routes")
+
 
 
 // IMPORTAR MIDDLEWARES
@@ -41,6 +45,11 @@ app.get('/login', function(req, res){
   res.render('login_view');
 });
 
+// [GET] /logout - Cierre de sesión del usuario logeado
+app.get('/logout', function(req, res){
+  res.render('logout_view');
+});
+
 // [GET] /profile - Compartida con Users
 app.get('/profile', function(req, res){
   res.render('profile_view');
@@ -68,7 +77,11 @@ app.get('/profile', function(req, res){
 app.use('/users', usersRoutes);
 app.use('/api/ads',adsRoutes);
 app.use('/api/search', apiSearchRoutes);
+
 app.use('/api/login', apiLoginRoutes); 
+
+app.use('/api/favorites', apiFavoritesRoutes);
+
 
 
 

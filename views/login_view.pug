@@ -6,14 +6,19 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title JobApp Login
     body
-        h1 JobApp
-        h3 Sign In
-        form(action="./film" method="post" id="signInForm")
+        include ./header.pug
+        main
+            h1 JobApp
+            h3 Sign In
+            form(action="./film" method="post" id="signInForm")
+                label(for="email" id="siginMail") Email: 
+                input(type="text" id="userMail" name="userMail" required)
+                
+                label(for="password" id="siginPassword") Password: 
+                input(type="text" id="userPassword" name="userMail" required)
+                
+                button(type="submit") Buscar
 
-            input(type="text" id="userMail" required)
-            input(type="text" id="userPassword" required)
-            
-            button(type="submit") Buscar
-
-            p ¿Ha olvidado su contraseña? Pulse 
-                a(href="#") aquí
+                p ¿Ha olvidado su contraseña? Pulse 
+                    a(href="#") aquí
+        script(src="./script.js")

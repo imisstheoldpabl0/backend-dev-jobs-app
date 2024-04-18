@@ -6,6 +6,8 @@ html(lang="en")
     link(rel="stylesheet", href="./style.css")
     title users
   body 
+
+  include ./header.pug
     h1 All users
 
       each user in data
@@ -13,9 +15,4 @@ html(lang="en")
           li e-mail: #{user.name}
           li user: #{user.surname}
           li password: #{user.email}
-
-
-
-
- 
 

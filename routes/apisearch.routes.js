@@ -3,6 +3,6 @@ const router = express.Router();
 
 const apiSearchController = require('../controllers/apisearch.controller');
 
-router.get("/", apiSearchController.getSearchResults);
+router.get("/:title?", apiSearchController.getJob);
 
 module.exports = router;

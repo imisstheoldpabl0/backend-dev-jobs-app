@@ -1,6 +1,6 @@
 //const { Pool } = require('pg');
-const pool = require('../config/db_pgsql');
-const queries = require('../queries/users.queries')
+//const pool = require('../config/db_pgsql');
+//const queries = require('../queries/users.queries')
 
 
 // Crea un usuario - POST
