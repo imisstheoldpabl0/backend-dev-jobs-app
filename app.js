@@ -7,6 +7,7 @@ const port = 3000;
 const adsRoutes= require("./routes/ads.routes")
 const usersRoutes = require("./routes/users.routes");
 const apiSearchRoutes = require("./routes/apisearch.routes");
+const apiFavoritesRoutes= require("./routes/favorites.routes")
 
 
 // IMPORTAR MIDDLEWARES
@@ -74,6 +75,7 @@ app.get('/profile', function(req, res){
 app.use('/', usersRoutes);
 app.use('/api/ads',adsRoutes);
 app.use('/api/search', apiSearchRoutes);
+app.use('/api/favorites', apiFavoritesRoutes);
 
 
 
