@@ -11,9 +11,11 @@ html(lang="en")
             h1 JobApp
             h3 Sign In
             form(action="./film" method="post" id="signInForm")
-
-                input(type="text" id="userMail" required)
-                input(type="text" id="userPassword" required)
+                label(for="email" id="siginMail") Email: 
+                input(type="text" id="userMail" name="userMail" required)
+                
+                label(for="password" id="siginPassword") Password: 
+                input(type="text" id="userPassword" name="userMail" required)
                 
                 button(type="submit") Buscar
 
