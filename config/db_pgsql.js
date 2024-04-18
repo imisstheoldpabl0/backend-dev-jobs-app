@@ -1,6 +1,5 @@
-//const { Pool }= require('pg');
-//const pool = require('../config/db_pgsql');
-const { Pool }= require('pg');
+require('dotenv').config();
+const { Pool } = require('pg');
 //const pool = require('../config/db_pgsql');
   //enviroment variables for db connection
 const pool = new Pool({ 

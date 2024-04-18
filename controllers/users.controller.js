@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { models } = require('mongoose');
 const users = require('../models/users.model');
 
@@ -13,29 +14,18 @@ const createUser = async (req, res) => {
     });
 }
 
-/* ----- ADMIN ----- */
-
+// USERS TABLE
 // getAllUsers
 const getAllUsers = async (req, res) => {
-    const usersListObj = {};
-    usersListObj = queries.getAllUsers();
-    request.queries
-
- /*    request.query("select quantity from table WHERE type = 'apple'", function (err, recordset) {
-        var arrayLength = recordset.length;
-        for (var i = 0; i < arrayLength; i++) {
-          console.log(recordset[i]["quantity"]);
-        };
-   */
-    try {
-        let list = await getAllUsers();
-        res.status(200).json(list);
+   
+  try {
+    let users = await users.getAllUsers();
     }
     catch (error) {
         console.log('Error. Cannot get users list.');
         res.status(400).json({msj:`ERROR: ${error.stack}`});
     }
-    return list
+    res.status(200).json(entries);  // [] con los usuarios recuperados
 }
        
 
