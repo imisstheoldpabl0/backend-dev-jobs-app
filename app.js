@@ -7,6 +7,7 @@ const port = 3000;
 const adsRoutes= require("./routes/ads.routes")
 const usersRoutes = require("./routes/users.routes");
 const apiSearchRoutes = require("./routes/apisearch.routes");
+const apiLoginRoutes = require("./routes/login.routes");
 
 
 // IMPORTAR MIDDLEWARES
@@ -45,10 +46,7 @@ app.get('/profile', function(req, res){
   res.render('profile_view');
 });
 
-// [GET] /users - Vista del admin con el listado de usuarios
-app.get('/users', function(req, res){
-  res.render('users_view');
-});
+
 
 // [GET] /dashboard - Vista de admin para crear y visualizar anuncios (en la misma view)
 app.get('/dashboard', function(req, res){
@@ -66,9 +64,11 @@ app.get('/profile', function(req, res){
   });
 
 // ENDPOINTS API
-app.use('/', usersRoutes);
+// [GET] /users - Vista del admin con el listado de usuarios
+app.use('/users', usersRoutes);
 app.use('/api/ads',adsRoutes);
 app.use('/api/search', apiSearchRoutes);
+app.use('/api/login', apiLoginRoutes); 
 
 
 

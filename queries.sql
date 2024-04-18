@@ -72,9 +72,11 @@ const commonQueries = {
             profile_pic = COALESCE($6, profile_pic)
         WHERE email = $7;`
     loginUser: `
-    UPDATE users
-    SET log_status = TRUE
-    WHERE email = $1 AND password = $2;`
+        UPDATE users
+            SET log_status = TRUE
+        WHERE email = $1 AND password = $2;`,
+
+   
 };
 
 -- ROL checking

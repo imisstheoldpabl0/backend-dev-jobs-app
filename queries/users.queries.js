@@ -14,12 +14,19 @@ const usersQueries = {
     // Crea un usuario nuevo. Cuando alguien se registra (candidato) o cuando el admin da de alta a otro admin.
     createUser: `
     INSERT INTO users (
-        name NOT NULL,
-        surname NOT NULL,
-        email NOT NULL,
-        password NOT NULL)
-    VALUES ($1, $2, $3, $4);
+        name,
+        surname,
+        location,
+        email,
+        password
+       )
+    VALUES ($1, $2, $3, $4, $5);
     `,
+    /*
+        INSERT INTO users (name, surname, location, email, password, profile_pic, rol, log_status)
+    VALUES
+        ('John', 'Doe', 'New York', 'john.doe@example.com', 'password123', 'profile.jpg', 'candidate', false),
+    */
 
     // Actualiza datos del usuario. Si se actualizan los datos del propio perfil, o el admin  el perfil  de  otro usuario.
     updateUser: `
@@ -32,6 +39,12 @@ const usersQueries = {
             password = COALESCE($5, password),
             profile_pic = COALESCE($6, profile_pic)
         WHERE email = $7;`,
+
+    // Verificar si email y password son correctos
+    verifyData: `
+    SELECT FROM users 
+        WHERE 
+        email=$1 AND password=$2;`,
 
     // Cambia log_status en users a true
     updateToLogin: `
