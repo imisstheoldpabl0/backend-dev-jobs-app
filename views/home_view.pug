@@ -6,22 +6,7 @@ html(lang="en")
         link(rel="stylesheet" href="./style.css")
         title Dev Job Finder
     body
-        header.header
-            nav.navbar
-                a.nav-logo(href="#") DevJob Finder
-                ul.nav-menu
-                    li.nav-item 
-                        a.nav-link(href="#") Home
-                    li.nav-item
-                        a.nav-link(href="#") Profile
-                    li.nav-item
-                        a.nav-link(href="#") Ads
-                    li.nav-item
-                        a.nav-link(href="#") Logout
-                .hamburger
-                    span.bar
-                    span.bar
-                    span.bar
+        include ./header.pug
         main
             section(id="signUp")
                 h1 Home
@@ -32,5 +17,4 @@ html(lang="en")
                     input(type="text" id="jobTitle" name="jobTitle" required)
                     // Botón de búsqueda
                     button() Search
-
         script(src="./script.js")

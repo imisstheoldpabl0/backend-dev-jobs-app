@@ -40,6 +40,11 @@ app.get('/login', function(req, res){
   res.render('login_view');
 });
 
+// [GET] /logout - Cierre de sesión del usuario logeado
+app.get('/logout', function(req, res){
+  res.render('logout_view');
+});
+
 // [GET] /profile - Compartida con Users
 app.get('/profile', function(req, res){
   res.render('profile_view');
