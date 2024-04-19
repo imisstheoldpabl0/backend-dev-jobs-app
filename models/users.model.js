@@ -1,6 +1,6 @@
-const { Pool } = require('pg');
+//const { Pool } = require('pg');
 const pool = require('../config/db_pgsql');
-const queries = require('../queries/users.queries.js')
+const queries = require('../queries/users.queries')
 
 
 
@@ -28,7 +28,7 @@ const createUser = async (newUser) => {
 };
 
 // Listado de todos los usuarios - GET
-const getAllUsers = async (list) => {
+const getAllUsers = async () => {
     let client, result;
     try {
         client = await pool.connect();
