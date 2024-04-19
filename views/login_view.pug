@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title JobApp Login
+    body
+        include ./header.pug
+        main
+           h1 Sign In
+           section(id="signIn")
+            form(action="./user" method="post")
+                label(for="email" id="siginMail") Email: 
+                input(type="text" id="userMail" name="userMail" required)               
+                label(for="password" id="siginPassword") Password: 
+                input(type="text" id="userPassword" name="userMail" required)            
+                button(type="submit") Buscar
+                p ¿Ha olvidado su contraseña? Pulse 
+                    a(href="#") aquí
+        script(src="./script.js")

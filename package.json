@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "generate-docs": "jsdoc -c ./jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,12 @@
     "express": "^4.19.2",
     "mongoose": "^8.3.1",
     "morgan": "^1.10.0",
-    "pug": "^3.0.2"
+    "pg": "^8.11.5",
+    "pug": "^3.0.2",
+    "puppeteer": "^22.6.5"
   },
   "devDependencies": {
+    "jsdoc": "^4.0.2",
     "nodemon": "^3.1.0"
   }
 }

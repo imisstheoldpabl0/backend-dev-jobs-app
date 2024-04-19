@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+     meta(charset="UTF-8")
+     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+     link(rel="stylesheet" href="./style.css")
+     title Dev Job Finder
+  body
+      include ./header.pug
+      main
+        h1 Profile
+        section(id="profile")
+          form(action='./profile_view.pug' id="form_profile" method='post')
+            // Datos de perfil a editar
+            label(for='datoName') Nombre:
+            input#datoName(type='text' name='datoName' required='')
+            label(for='surname') Surname:
+            input#idSurname(type='text' name='surname' required='')
+            label(for='datoEmail') Email:
+            input#idEmail(type='text' name='email' required='')
+            label(for='datoPassword') Password:
+            input#idPassword(type='text' name='password' required='')
+            label(for='datoImage') Image:
+            input#idImage(type='text' name='datoImage' required='')
+            // Botón de cargar imagen
+            button(type='button') Up Load Image
+            img(src='' alt='')
+            // Botón de edición
+            button(type='submit') Update
+            img(src='' alt='')
+      script(src="./script.js")

@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./style.css")
+        title Dev Job Finder
+    body
+        include ./header.pug
+        main
+            section(id="home")
+                h1 Busca tu oferta de trabajo
+                    input(type="text" id="jobTitle" name="jobTitle" required)
+                    // Botón de búsqueda
+                    button(id="search") Search
+            section(id="jobOffers")
+        script(src="./script.js")
