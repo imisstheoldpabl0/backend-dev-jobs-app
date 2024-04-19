@@ -1,10 +1,20 @@
+/**
+ * @fileoverview This file defines the controller for searching the API.
+ * @exports controllers
+ * @namespace controllers
+ */
+
 //const jobOffers = require("../glassdoor.json")
 const Ads = require('../models/ads.model');
 
-/* const getSearchResults = async (req, res) => {
-    res.status(200).json(jobOffers)
-    //Función que haga web scraping con el valor que haya en el input
-} */
+/**
+ * Retrieves job data based on the provided title.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Promise<void>} - A promise that resolves with the job data or an error message.
+ * @memberof controllers
+ */
 const getJob = async (req, res) => {
 
     try {
