@@ -1,9 +1,6 @@
 require('dotenv').config();
 const users = require('../models/users.model');
 
-
-
-
 // createUser
 const createUser = async (req, res) => {
     const newUser = req.body; // {name, surname, location, email, password}
@@ -12,14 +9,12 @@ const createUser = async (req, res) => {
         "user_created": response,
         data: newUser
     });
-}
-
+};
 
 // getAllUsers
 const getAllUsers = async (req, res) => {
   try {
     const data = await users.getAllUsers();
-    console.log(data);
     res.status(200).render("users_view.pug", {data}); 
     }
     catch (error) {
@@ -27,7 +22,7 @@ const getAllUsers = async (req, res) => {
         res.status(400).json({msj:`ERROR: ${error.stack}`});
     }
   // [] con los usuarios recuperados
-}
+};
 
 //Localiza un usario por email
 const getUserByEmail = async(email) => {
@@ -47,40 +42,11 @@ const getUserByEmail = async(email) => {
 
 const deleteUser = async (req, res) => {
 
-}
-
+};
 
 module.exports = {
     createUser,
     getAllUsers,
     deleteUser,
     getUserByEmail
-}
-
-
-
-
-
-
-
-
-// USER
-
-
-// CRUDE para usuarios logueados
-
-// POST createUser (SignUp)
-
-// UPDATE editUserProfile
-
-// POST addFavorite
-
-// DELETE deleteFavorites
-
-// DELETE deleteUser (darse de baja: opcional)
-
-// GET Resultados de la búsqueda
-
-// GET Recover password / Restore
-
-// Cambio de contraseña amirar
+};

@@ -1,5 +1,4 @@
 const usersQueries = {
-
     //Crea un listado de todos los usuarios. Para la /dasboard en admin
     getAllUsers: `
     SELECT *  FROM users
@@ -22,13 +21,13 @@ const usersQueries = {
        )
     VALUES ($1, $2, $3, $4, $5);
     `,
-    /*
-        INSERT INTO users (name, surname, location, email, password, profile_pic, rol, log_status)
-    VALUES
-        ('John', 'Doe', 'New York', 'john.doe@example.com', 'password123', 'profile.jpg', 'candidate', false),
-    */
 
+    /*
+    INSERT INTO users (name, surname, location, email, password, profile_pic, rol, log_status)
+    VALUES ('John', 'Doe', 'New York', 'john.doe@example.com', 'password123', 'profile.jpg', 'candidate', false),
+    */
     // Actualiza datos del usuario. Si se actualizan los datos del propio perfil, o el admin  el perfil  de  otro usuario.
+
     updateUser: `
     UPDATE users
         SET 
@@ -72,6 +71,6 @@ const usersQueries = {
     DELETE FROM users
     WHERE email = $1;
     `
-}
+};
 
-module.exports = usersQueries
+module.exports = usersQueries;

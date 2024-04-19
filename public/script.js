@@ -6,20 +6,12 @@ hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-}
-
-/* const getJob = async (id = "") => {
-    let response = await fetch(`https://fakestoreapi.com/products/${id}`); //{} o [{},{},{},{}]
-    let products = await response.json(); //{} o [{},{},{},{}]
-
-    if (Array.isArray(products)) return products;
-    else return [products]; // Siempre sea un [{}]
-}; */
+};
 
 /* HOME PAGE - SEARCH */
 
 document.querySelector("#search").addEventListener("click", () => {
-    let userResult = document.getElementById("jobTitle").value
+    let userResult = document.getElementById("jobTitle").value;
     console.log(userResult);
 
     document.querySelector("#jobOffers").innerHTML = ``;
@@ -42,8 +34,3 @@ document.querySelector("#search").addEventListener("click", () => {
             }
         })
 });
-
-
-module.exports = {
-    getSearchData,
-}

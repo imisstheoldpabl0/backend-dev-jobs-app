@@ -6,7 +6,6 @@
 
 const express = require('express');
 const router = express.Router();
-
 const apiFavoriteController = require("../controllers/apifavorites.controller");
 
 /**
@@ -27,6 +26,5 @@ router.post("/:id", apiFavoriteController.createFavorite)
      * @param {string} id - The ID of the favorite.
      * @returns {object} The created favorite.
      */
-
 
 module.exports = router;

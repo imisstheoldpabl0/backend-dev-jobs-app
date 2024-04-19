@@ -11,8 +11,7 @@
  * @memberof requirements
  */
 const mongoose = require('mongoose');
-require('../config/db_mongo') // Conexión a BBDD MongoDB
-
+require('../config/db_mongo'); // Conexión a BBDD MongoDB
 
 /**
  * @typedef {Object} objectSchema
@@ -67,7 +66,6 @@ const objectSchema = {
 
 // Crear el esquema
 const adsSchema = mongoose.Schema(objectSchema);
-
 
 // Crear el modelo --> Colección
 const Ads = mongoose.model('Ads', adsSchema);
