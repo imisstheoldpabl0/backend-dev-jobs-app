@@ -15,8 +15,14 @@
 
 
     body {
-        width: auto;
-        background-color: #cdd0d5;
+        width: 100%;
+        height: 100vh;
+        /* Ruta de la imagen */
+        background-image: url("./assets/fondoOficina.jpg");
+        background-size: cover;
+        background-repeat: repeat;
+        /* Cubrir completamente el contenedor */
+        background-position: center;
     }
 
 
@@ -72,54 +78,73 @@
         margin-bottom: 30px;
     }
 
-  
-.favoriteCard {
-    background-color: white;
-    border: 2px solid #101010;
-    margin: 10px 40px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
 
-    img {
-        width: 30%;
-        height: 30%;
-    }
-
-    article {
+    .favoriteCard {
+        background-color: white;
+        border: 2px solid #101010;
+        margin: 10px 40px;
+        padding: 10px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
 
         article {
             display: flex;
-            flex-direction: column;
-            text-align: center;
-            margin: 10px;
+            align-items: center;
 
-            h3 {
-                margin: 0;
-            }
+            article {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 10px;
 
-            h5 {
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
+                h3 {
+                    margin: 0;
+                }
 
-            p {
-                margin: 0;
+                h5 {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    margin: 0;
+                }
             }
+        }
+
+        p {
+            margin: 5px;
+            text-align: justify;
+        }
+
+        a {
+            margin: 5px;
         }
     }
 
-    p {
-        margin: 5px;
-        text-align: justify;
+    @media only screen and (min-width: 700px) {
+        .favoriteCard {
+            margin-left: 100px;
+            margin-right: 100px;
+
+            article {
+                justify-content: space-around;
+            }
+            
+        }
     }
 
-    a {
-        margin: 5px;
+    @media only screen and (min-width: 1080px) {
+        .favoriteCard {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
     }
-}
 
 
     h3 {
@@ -131,14 +156,14 @@
         margin-left: 23px;
     }
 
-  
+
     #user_main {
         h1 {
             margin-bottom: 50px;
         }
     }
 
-  
+
     #user_card {
         display: flex;
         flex-direction: column;
@@ -186,7 +211,7 @@
         margin-left: 5px;
         max-width: 400px;
         border-radius: 1 em;
-        border: 2px solid #101010;
+        border: 4px solid #101010;
         padding-top: 10px;
         font-size: small;
     }
@@ -278,6 +303,7 @@
         height: auto;
         margin-top: 5px;
         margin-left: 20px;
+        margin-right: 20px;
         border-radius: 1 em;
         border: 2px solid #101010;
         padding-top: 10px;
@@ -399,7 +425,7 @@
             flex-direction: column;
             align-items: center;
         }
-        
+
         #form_profile {
             background-color: white;
             width: 90%;
@@ -410,7 +436,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
 
         #li_users {
             font-size: 15px;
@@ -445,7 +471,7 @@
             margin-left: 20px;
             max-width: 400px;
             border-radius: 1 em;
-            border: 2px solid #101010;
+            border: 4px solid #101010;
             padding-top: 10px;
             font-size: small;
         }
@@ -663,40 +689,39 @@
 }
 
 
-    }
+#form_profile {
+    background-color: white;
+    display: grid;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 1 em;
+    border: 2px solid #101010;
+    padding-top: 10px;
+    font-size: small;
+}
 
 
-    #form_profile {
-        background-color: white;
-        display: grid;
-        align-items: center;
-        width: 90%;
-        height: auto;
-        margin-top: 5px;
-        margin-left: 20px;
-        border-radius: 1 em;
-        border: 2px solid #101010;
-        padding-top: 10px;
-        font-size: small;
-    }
+#profile {
+    width: 90%;
+    height: auto;
+}
 
 
-    #profile {
-        width: 90%;
-        height: auto;
-    }
-
-
-    form {
-        background-color: white;
-        width: 90%;
-        height: auto;
-        margin: auto;
-        max-width: 400px;
-        border-radius: 1 em;
-        border: 2px solid #101010;
-        padding-top: 10px;
-        font-size: small;
+form {
+    background-color: white;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 1 em;
+    border: 2px solid #101010;
+    padding-top: 10px;
+    font-size: small;
+}
 
 #jobOffers {
     display: flex;
