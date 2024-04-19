@@ -1,4 +1,3 @@
-
 -- QUERIES DE INICIO
 
 -- Create users table
@@ -45,18 +44,18 @@ const AdminQueries = {
     deleteUser: `
     DELETE FROM users
     WHERE username = $1;`
-}
+};
 
 -- USER QUERIES /api/user
 -- (al crearse la tabla users, y crearse una cuenta, solo deberian rellenarse los campos de username y email, y password, y posteriormente se podra actualizar el resto de campos una vez se edite el perfil)
 const userQueries = {
     createUser: `
     INSERT INTO users
-        VALUES
-            username = $1,
-            email = $2,
-            password = $3,`
-}
+    VALUES
+        username = $1,
+        email = $2,
+        password = $3,`
+};
 
 -- COMMON QUERIES /api/user
 const commonQueries = {
@@ -75,10 +74,4 @@ const commonQueries = {
         UPDATE users
             SET log_status = TRUE
         WHERE email = $1 AND password = $2;`,
-
-   
 };
-
--- ROL checking
-
-

@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const app = express();
-
 const adsController = require('../controllers/ads.controller');
-
 
 //router.get("/", adsController.readAllAds);
 router.post("/", adsController.createAds);

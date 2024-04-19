@@ -1,7 +1,6 @@
 //const {Pool} = require('pg');
 const pool = require('../config/db_pgsql');
 
-
 const addFavorite = async (id_user, id_job_offer) => {
   let client;
   try {
@@ -19,5 +18,3 @@ const addFavorite = async (id_user, id_job_offer) => {
 module.exports = {
   addFavorite
 };
-
-//modules.exports = favorites;
