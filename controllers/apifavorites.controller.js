@@ -1,12 +1,10 @@
 const addFavorite= require("../models/favorites.model");
 
-
 // CREATE favorite
 const createFavorite = async (req, res) => {
     try {
         const userId = req.user.id;
         const offerId = req.params.id;
-
         // Ver si la oferta de trabajo existe
         const jobOffer = await JobOffer.findById(id);
         if (!jobOffer) {
@@ -14,7 +12,6 @@ const createFavorite = async (req, res) => {
         }
         // Llamar a la función addFavorite para añadir la oferta como favorita en el registro
         await addFavorite(userId, offerId);
-
         res.status(200).json({ message: 'Job offer added to favorites successfully' });
     } catch (error) {
         console.error(`ERROR: ${error.stack}`);
@@ -25,6 +22,3 @@ const createFavorite = async (req, res) => {
 module.exports = {
     createFavorite
 };
-
-
-

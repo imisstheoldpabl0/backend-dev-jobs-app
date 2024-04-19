@@ -11,47 +11,44 @@ const createAds = async (req, res) => {
         console.log(`ERROR: ${error.stack}`);
         res.status(400).json({ msj: `ERROR: ${error.stack}` });
     }
-}
+};
 
-/* //READ
+//READ ads
 async function readAllAds() {
-    const ads = await Ads
-    console.log(ads);
-    res.status(200).json({
-    });
-} */
+    const ads = await Ads;
+    res.status(200).json(ads);
+};
 
 //UPDATE ads
-
 const updateAds = async (req, res) => {
     try {
         const id = req.params.id;
         const newData = req.body;
-        let ads = await Ads.updateOne({id}, newData)
+        let ads = await Ads.updateOne({id}, newData);
         res.status(200).json(ads);
     } 
     catch (error) {
         console.log(`ERROR: ${error.stack}`);
         res.status(400).json({ msj: `ERROR: ${error.stack}` });
     }
-}
+};
 
 //DELETE ads
 const deleteAds = async (req, res) => {
     try {
         const newData = req.body;
-        let ads = await Ads.deleteOne(newData)
+        let ads = await Ads.deleteOne(newData);
         res.status(200).json(ads);
     } 
     catch (error) {
         console.log(`ERROR: ${error.stack}`);
         res.status(400).json({ msj: `ERROR: ${error.stack}` });
     }
-}
+};
 
 module.exports = {
     createAds,
     //readAllAds,
     updateAds,
     deleteAds
-}
+};
