@@ -72,6 +72,55 @@
         margin-bottom: 30px;
     }
 
+  
+.favoriteCard {
+    background-color: white;
+    border: 2px solid #101010;
+    margin: 10px 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 30%;
+        height: 30%;
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 10px;
+
+            h3 {
+                margin: 0;
+            }
+
+            h5 {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    p {
+        margin: 5px;
+        text-align: justify;
+    }
+
+    a {
+        margin: 5px;
+    }
+}
+
 
     h3 {
         display: flex;
@@ -82,12 +131,14 @@
         margin-left: 23px;
     }
 
+  
     #user_main {
         h1 {
             margin-bottom: 50px;
         }
     }
 
+  
     #user_card {
         display: flex;
         flex-direction: column;
@@ -341,6 +392,7 @@
             margin-left: 23px;
         }
 
+
         #profile {
             width: 100%;
             display: flex;
@@ -374,6 +426,7 @@
             padding: 30px;
             border: 2px solid #101010;
         }
+
 
         #userMail {
             margin: 15px;
@@ -483,7 +536,6 @@
 }
 
 
-
 /* ----- NAVBAR ----- */
 /* (https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci) */
 .header {
@@ -536,6 +588,7 @@
 
     .nav-link:hover {
         color: #482ff7;
+
     }
 
     .nav-logo {
@@ -549,6 +602,17 @@
         .navbar {
             width: 100%;
         }
+
+
+    }
+
+    .nav-logo {
+        font-size: 2.1rem;
+        font-weight: 500;
+        color: #482ff7;
+    }
+
+    @media only screen and (max-width: 1080px) {
 
         .nav-menu {
             position: fixed;
@@ -595,6 +659,9 @@
         .hamburger.active .bar:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
+    }
+}
+
 
     }
 
@@ -630,5 +697,31 @@
         border: 2px solid #101010;
         padding-top: 10px;
         font-size: small;
+
+#jobOffers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .jobCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin: 20px;
+        border-radius: 1 em;
+        border: 2px solid #101010;
+        font-size: 12px;
+        height: auto;
+
+        .jobCardInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px;
+        }
+
     }
 }

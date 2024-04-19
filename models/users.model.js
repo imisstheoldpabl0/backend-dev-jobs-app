@@ -3,6 +3,7 @@ const pool = require('../config/db_pgsql');
 const queries = require('../queries/users.queries')
 
 
+
 // Crea un usuario - POST
 const createUser = async (newUser) => {
     const { name, surname, location, email, password } = newUser;
@@ -16,18 +17,14 @@ const createUser = async (newUser) => {
             email,
             password
         ]);
-
         result = data.rowCount;
-
     } catch (err) {
         console.log(err);
         throw err;
     } finally {
         client.release();
     }
-
     return result;
-
 };
 
 // Listado de todos los usuarios - GET
@@ -43,7 +40,7 @@ const getAllUsers = async () => {
     } finally {
         client.release();
     }
- 
+
 }
 
 
